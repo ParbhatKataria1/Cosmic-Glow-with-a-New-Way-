@@ -1,0 +1,88 @@
+/* toggle feature start */
+#toggle-button{
+    display: flex;
+}
+#toggle-button>div{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+/* first toggle */
+#exclusive-store{
+    display: none;
+}
+
+#exclusive-store+label{
+    position: relative;
+    width: 45px;
+    height: 23px;
+    background: gray;
+    display: inline-block;
+    border-radius: 50px;
+    transition: background 150ms linear;
+}
+
+#exclusive-store+label::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 25px ;
+    height: 25px;
+    background: rgb(119, 95, 95);
+    border-radius: 50px;
+    transform: translateY(-50%);
+    transition: left 150ms linear;
+}
+
+#exclusive-store:checked + label{
+    background: rgb(132, 59, 59);
+}
+#exclusive-store:checked + label::before{
+    content: "";
+    left: 20px
+}
+
+
+/* second toggle */
+
+#shop-in-shop{
+    display: none;
+}
+
+#shop-in-shop+label{
+    position: relative;
+    width: 45px;
+    height: 23px;
+    background: gray;
+    display: inline-block;
+    border-radius: 50px;
+    transition: background 150ms linear;
+}
+
+#shop-in-shop+label::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 25px ;
+    height: 25px;
+    background: rgb(119, 95, 95);
+    border-radius: 50px;
+    transform: translateY(-50%);
+    transition: left 150ms linear;
+}
+
+#shop-in-shop:checked + label{
+    background: rgb(132, 59, 59);
+}
+#shop-in-shop:checked + label::before{
+    content: "";
+    left: 20px
+}
+
+
+
+
+/* toggle feature end */
