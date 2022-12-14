@@ -1,0 +1,244 @@
+
+body{
+    background-color: rgb(247, 243, 237);
+    font-family: sans-serif;
+}
+
+/* -------navbar-------- */
+
+
+#NAVBARFix{
+    position: fixed ;
+    top: 0 ;
+    width: 100%;
+}
+
+#navbar{
+    display: flex ; 
+    flex-direction: row ;
+    height: 80px ;
+    gap: 14px;
+    background-color: #F7BBC9;
+    align-items: center ;
+}
+
+#navbar>img{
+    height: 80px ;
+    width: 250px;
+}
+#navbar>img:hover{
+   height: 81px ;
+   cursor: pointer;
+}
+#navbar>input{
+    font-size: 17px;
+    margin-left: 50px;
+    height: 35px ;
+    width: 450px ;
+    border-color: black ;
+    border-radius: 10px ;
+    box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset;
+}
+#navbar>button{
+    
+    width:50px ;
+    align-items: center ;
+    height: 35px ;
+    border-color: black ;
+    border-radius: 10px ;
+
+}
+#navbar>button:hover{
+    cursor: pointer; 
+    background-color: #ff6186;
+    border-color: white ;
+}
+#navbar>button > img , #navbar>#RightIcons>img , #navbar>#Login>img {
+    height: 30px ;
+}
+#Login{
+    display: flex ;
+    flex-direction: row ;
+    margin-left: 18%;
+    width: 170px ;
+    justify-content: center;
+}
+#Login>img {
+   /* margin-top: 9px ; */
+   margin-right: 5px;
+}
+#RightIcons{
+    margin-left: 1%;
+}
+#RightIcons>img:hover ,#Login:hover{
+    background-color:#ff6186 ;
+    color: white;
+    border-radius: 5px ;
+    cursor: pointer;
+  }
+ 
+  *{
+    margin: 0 ;
+    padding: 0  ;
+ }
+#navFilters{
+   
+    height: 30px ;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+#navFilters>ul{
+    display: inline-flex ;
+    list-style: none ;
+   
+    background-color: #F7BBC9 ;
+    width: 100%;
+
+}
+#navFilters>ul>li{
+  padding: 15px ;
+  margin: 15px ;
+  width: 130px;
+  margin-left: 20px ;
+}
+#navFilters>ul>li:hover{
+    background-color: #ff6186;
+    color: white;
+    cursor: pointer;
+}
+#navFilters>ul>li>img{
+    height: 25px ;
+    margin-right: 10px;
+}
+.subManu-make {
+display: none ;
+}
+#navFilters>ul>li:hover .subManu-make  {
+
+gap: 5px ;
+display: block ;
+position: absolute ;
+margin-top: 15px ;
+margin-left: -15px ;
+background-color: black;
+}
+#navFilters>ul>li:hover .subManu-make ul{
+display: block ;
+margin: 10px ;
+
+}
+#navFilters>ul>li:hover .subManu-make ul li{
+width: 150px ;
+padding: 15px ;
+border-bottom: 1px double rgb(255, 255, 255);
+color: rgb(223, 222, 222);
+text-align: left;
+background: transparent ;
+}
+#navFilters>ul>li:hover .subManu-make>ul>li:hover{
+color: #ff6186;
+}
+#navFilters>ul>li:hover .subManu-make ul li:last-child{
+border-bottom: none;
+}
+
+
+
+
+/* --------mini navbar below main navbar-------- */
+
+
+
+.mini-nav{
+    height:40px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 17px;
+    margin-top: 170px;
+    margin-bottom: 20px;
+}
+.mini-nav > div:nth-child(1)>a{
+    text-decoration: none;
+    color: gray;
+}
+.mini-nav > div:nth-child(3)>a{
+ text-decoration: none;
+ font-weight: bold;
+}
+
+
+/* --------empty cart image container--------- */
+
+
+.empty_cart_box{
+    width:95%;
+    height:auto;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.inner-empty-cart-box{
+width:30%;
+height:100%;
+margin:auto;
+text-align: center;
+color: grey;
+}
+
+.inner-empty-cart-box > img{
+    width:80%;
+}
+
+.inner-empty-cart-box > button{
+    border:3px solid #f2ccd6;
+    background-color: white;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-weight :bold;
+    margin:15px 0 15px 0;
+    font-size: 15px;
+}
+
+.inner-empty-cart-box > button > a{
+    text-decoration: none;
+    color:black;
+}
+
+.inner-empty-cart-box > button:hover{
+    background-color: #FBDAE2;
+    cursor: pointer;
+}
+
+/* ----------bestseller box-------- */
+
+.bestseller{
+    margin-top: 40px;
+}
+
+.bestseller_heading{
+    display: flex;
+    margin:auto;
+}
+.bestseller_heading > p{
+    text-align: center;
+}
+.bestseller_heading >p:nth-child(1){
+    color:#fc2779;
+    margin-left: 43%;
+    font-size: 20px;
+}
+.bestseller_heading >p:nth-child(2){
+    font-weight: bold;
+    font-size: 20px;
+}
+.bestseller_heading >p:nth-child(3){
+    color:#fc2779;
+    font-size: 20px;
+}
+
