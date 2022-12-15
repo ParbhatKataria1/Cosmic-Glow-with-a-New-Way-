@@ -1,0 +1,328 @@
+/* Navbar CSS */
+#NAVBARFix{
+    position: fixed ;
+    top: 0 ;
+    width: 100%;
+}
+
+#navbar{
+    display: flex ; 
+    flex-direction: row ;
+    height: 80px ;
+    gap: 14px;
+    background-color: #F7BBC9;
+    align-items: center ;
+}
+
+#navbar>img{
+    height: 80px ;
+    width: 250px;
+}
+#navbar>img:hover{
+   height: 81px ;
+   cursor: pointer;
+}
+#navbar>input{
+    font-size: 17px;
+    margin-left: 50px;
+    height: 35px ;
+    width: 450px ;
+    border-color: black ;
+    border-radius: 10px ;
+    box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset;
+}
+#navbar>button{
+    
+    width:50px ;
+    align-items: center ;
+    height: 35px ;
+    border-color: black ;
+    border-radius: 10px ;
+
+}
+#navbar>button:hover{
+    cursor: pointer; 
+    background-color: #ff6186;
+    border-color: white ;
+}
+#navbar>button > img , #navbar>#RightIcons>img , #navbar>#Login>img {
+    height: 30px ;
+}
+#Login{
+    display: flex ;
+    flex-direction: row ;
+    margin-left: 18%;
+    width: 170px ;
+    justify-content: center;
+}
+#Login>img {
+   /* margin-top: 9px ; */
+   margin-right: 5px;
+}
+#RightIcons{
+    margin-left: 1%;
+}
+#RightIcons>img:hover ,#Login:hover{
+    background-color:#ff6186 ;
+    color: white;
+    border-radius: 5px ;
+    cursor: pointer;
+  }
+ 
+  *{
+    margin: 0 ;
+    padding: 0  ;
+ }
+#navFilters{
+   
+    height: 30px ;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+#navFilters>ul{
+    display: inline-flex ;
+    list-style: none ;
+   
+    background-color: #F7BBC9 ;
+    width: 100%;
+
+}
+#navFilters>ul>li{
+  padding: 15px ;
+  margin: 15px ;
+  width: 130px;
+  margin-left: 20px ;
+}
+#navFilters>ul>li:hover{
+    background-color: #ff6186;
+    color: white;
+    cursor: pointer;
+}
+#navFilters>ul>li>img{
+    height: 25px ;
+    margin-right: 10px;
+}
+.subManu-make {
+display: none ;
+}
+#navFilters>ul>li:hover .subManu-make  {
+
+gap: 5px ;
+display: block ;
+position: absolute ;
+margin-top: 15px ;
+margin-left: -15px ;
+background-color: black;
+}
+#navFilters>ul>li:hover .subManu-make ul{
+display: block ;
+margin: 10px ;
+
+}
+#navFilters>ul>li:hover .subManu-make ul li{
+width: 150px ;
+padding: 15px ;
+border-bottom: 1px double rgb(255, 255, 255);
+color: rgb(223, 222, 222);
+text-align: left;
+background: transparent ;
+}
+#navFilters>ul>li:hover .subManu-make>ul>li:hover{
+color: #ff6186;
+}
+#navFilters>ul>li:hover .subManu-make ul li:last-child{
+border-bottom: none;
+}
+
+/*  CSS */
+#top_img{
+    margin-top: 150px;
+    /* border:2px solid blue; */
+}
+#top_img>img{
+    width: 100%;
+    height: auto;
+}
+#cars{
+    height: 20px;
+    font-size: 15px;
+    padding: 10px;
+}
+#cart_container{
+    /* border: 4px solid black; */
+    display: flex;
+    margin: auto;
+    background-color:#fefdfd;
+    
+}
+#sidebar{
+    width: 20%;
+    height: auto;
+    /* border: 2px solid blue; */
+    padding: 30px;
+}
+
+#products_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    margin: auto;
+    padding: 20px;
+    /* width: 60%; */
+    /* height: 600px; */
+    /* border: 2px solid red; */
+}
+#products_grid>div{
+  
+  text-align: center;
+  padding: 15px;
+  /* border: 1px solid black; */
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+#products_grid>div>h3{
+  margin-top: 15px;
+}
+
+#products_grid>div>img{
+  width: 60%;
+  height: auto;
+}
+#products_grid>div>h5{
+  margin-top: 15px;
+  color: rgb(240, 63, 63);
+}
+#products_grid>div>h6{
+  margin-top: 15px;
+}
+#products_grid>div>button{
+  margin-top: 15px;
+  padding: 10px 45px;
+  background-color: #F7BBC9;
+  border: none;
+  color: black;
+  border-radius: 10px;
+}
+#products_grid>div>button:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+ 
+}
+
+/* sidebar CSS */
+
+ 
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px 80px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #444;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796";
+  }
+  
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  /* CSS for Sort Sidebar */
+ #sidebar>button:nth-child(1){
+  margin-bottom: 20px;
+  /* border-radius: 10px; */
+ }
+
+
+
+ 
+
+  /* CSS for checkbox in filter sidebar */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    
+  }
+  
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /*checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  
+  /* add a background color when checkbox is checked */
+  .container input:checked ~ .checkmark {
+    background-color: #F7BBC9;
+  }
+  
+  /* checkmark */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
