@@ -15,8 +15,8 @@
 
 #exclusive-store+label{
     position: relative;
-    width: 45px;
-    height: 23px;
+    width: 42px;
+    height: 17px;
     background: gray;
     display: inline-block;
     border-radius: 50px;
@@ -28,20 +28,24 @@
     position: absolute;
     top: 50%;
     left: 0px;
-    width: 25px ;
-    height: 25px;
-    background: rgb(119, 95, 95);
+    width: 21px ;
+    height: 21px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: white;
     border-radius: 50px;
     transform: translateY(-50%);
     transition: left 150ms linear;
 }
 
 #exclusive-store:checked + label{
-    background: rgb(132, 59, 59);
+    /* background: rgb(132, 59, 59); */
+    background:#feb4d0
+    
 }
 #exclusive-store:checked + label::before{
     content: "";
-    left: 20px
+    left: 20px;
+    background: #fc2779
 }
 
 
@@ -53,8 +57,8 @@
 
 #shop-in-shop+label{
     position: relative;
-    width: 45px;
-    height: 23px;
+    width: 42px;
+    height: 17px;
     background: gray;
     display: inline-block;
     border-radius: 50px;
@@ -66,20 +70,22 @@
     position: absolute;
     top: 50%;
     left: 0px;
-    width: 25px ;
-    height: 25px;
-    background: rgb(119, 95, 95);
+    width: 21px ;
+    height: 21px;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 50px;
     transform: translateY(-50%);
     transition: left 150ms linear;
 }
 
 #shop-in-shop:checked + label{
-    background: rgb(132, 59, 59);
+    background:#feb4d0
 }
 #shop-in-shop:checked + label::before{
     content: "";
-    left: 20px
+    left: 20px;
+    background: #fc2779
 }
 
 
