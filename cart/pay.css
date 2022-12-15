@@ -1,0 +1,362 @@
+body{
+    background-color: rgb(247, 243, 237);
+    font-family: sans-serif;
+}
+
+/* ------navbar------ */
+
+
+#NAVBARFix{
+    position: fixed ;
+    top: 0 ;
+    width: 100%;
+}
+
+#navbar{
+    display: flex ; 
+    flex-direction: row ;
+    height: 80px ;
+    gap: 14px;
+    background-color: #F7BBC9;
+    align-items: center ;
+}
+
+#navbar>img{
+    height: 80px ;
+    width: 250px;
+}
+#navbar>img:hover{
+   height: 81px ;
+   cursor: pointer;
+}
+#navbar>input{
+    font-size: 17px;
+    margin-left: 50px;
+    height: 35px ;
+    width: 450px ;
+    border-color: black ;
+    border-radius: 10px ;
+    box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset;
+}
+#navbar>button{
+    
+    width:50px ;
+    align-items: center ;
+    height: 35px ;
+    border-color: black ;
+    border-radius: 10px ;
+
+}
+#navbar>button:hover{
+    cursor: pointer; 
+    background-color: #ff6186;
+    border-color: white ;
+}
+#navbar>button > img , #navbar>#RightIcons>img , #navbar>#Login>img {
+    height: 30px ;
+}
+#Login{
+    display: flex ;
+    flex-direction: row ;
+    margin-left: 18%;
+    width: 170px ;
+    justify-content: center;
+}
+#Login>img {
+   /* margin-top: 9px ; */
+   margin-right: 5px;
+}
+#RightIcons{
+    margin-left: 1%;
+}
+#RightIcons>img:hover ,#Login:hover{
+    background-color:#ff6186 ;
+    color: white;
+    border-radius: 5px ;
+    cursor: pointer;
+  }
+ 
+  *{
+    margin: 0 ;
+    padding: 0  ;
+ }
+#navFilters{
+   
+    height: 30px ;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+#navFilters>ul{
+    display: inline-flex ;
+    list-style: none ;
+   
+    background-color: #F7BBC9 ;
+    width: 100%;
+
+}
+#navFilters>ul>li{
+  padding: 15px ;
+  margin: 15px ;
+  width: 130px;
+  margin-left: 20px ;
+}
+#navFilters>ul>li:hover{
+    background-color: #ff6186;
+    color: white;
+    cursor: pointer;
+}
+#navFilters>ul>li>img{
+    height: 25px ;
+    margin-right: 10px;
+}
+.subManu-make {
+display: none ;
+}
+#navFilters>ul>li:hover .subManu-make  {
+
+gap: 5px ;
+display: block ;
+position: absolute ;
+margin-top: 15px ;
+margin-left: -15px ;
+background-color: black;
+}
+#navFilters>ul>li:hover .subManu-make ul{
+display: block ;
+margin: 10px ;
+
+}
+#navFilters>ul>li:hover .subManu-make ul li{
+width: 150px ;
+padding: 15px ;
+border-bottom: 1px double rgb(255, 255, 255);
+color: rgb(223, 222, 222);
+text-align: left;
+background: transparent ;
+}
+#navFilters>ul>li:hover .subManu-make>ul>li:hover{
+color: #ff6186;
+}
+#navFilters>ul>li:hover .subManu-make ul li:last-child{
+border-bottom: none;
+}
+
+
+/* ---------NAVBAR ENDS HERE------- */
+
+
+   /* ------mini-navbar------- */
+   .mini-nav{
+    height:40px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 17px;
+    /* margin-bottom: 10px; */
+    margin-top:170px;
+}
+.mini-nav > div:nth-child(1)>a{
+    text-decoration: none;
+    color: gray;
+}
+.mini-nav > div:nth-child(3)>a{
+ text-decoration: none;
+ color: gray;
+}
+.mini-nav > div:nth-child(5)>a{
+ text-decoration: none;
+ color:black;
+ font-weight: bold;
+}
+
+/* -------MINI NAVBAR ENDS HERE----- */
+
+
+.payment_container{
+    WIDTH:95%;
+    height:600px;
+    margin:auto;
+    /* border:1px solid red; */
+    /* margin-top:10px; */
+    display: flex;
+}
+
+.left_payment_container{
+    width:40%;
+    height:90%;
+    /* border:1px solid blue; */
+    padding:15px;
+}
+
+/* -------LEFT TOP PART------ */
+
+
+.price_detail{
+    color:rgb(47, 47, 47);
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#price_details_box{
+    border:1px dashed grey;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.price_details_upper{
+    display: flex;
+    padding:5px 25px 10px 25px;
+    border-bottom:1px dashed grey;
+    color:grey;
+    font-size: 13px;
+}
+.price_details_upper > div:first-child{
+    width:50%;
+    height:auto;
+    line-height:25px;
+    /* border:1px solid red; */
+}
+.price_details_upper > div:last-child{
+    width:50%;
+    height:auto;
+    /* border:1px solid red; */
+    text-align: end;
+    line-height: 25px;
+}
+.price_details_lower{
+    display: flex;
+    padding:5px 25px 5px 25px;
+}
+
+.price_details_lower > h3:first-child{
+    width:50%;
+    height:25px;
+    align-items: center;
+    /* border:1px solid red; */
+}
+.price_details_lower > h3:last-child{
+    width:50%;
+    height:25px;
+    text-align: end;
+    /* border:1px solid red; */
+}
+
+
+
+/* ---------BOTTOM LEFT PART-------- */
+
+
+
+
+.cart_summary_heading{
+    color:rgb(47, 47, 47);
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.cart_summary{
+    width:99%;
+    border:1px dashed black;
+    border-radius: 10px;
+    background-color: white;
+    padding:5px 0px 5px 5px;
+}
+.cart_summary >div{
+    width:100%;
+    display: flex;
+    padding:10px;
+}
+.cart_summary >div >img{
+    width:7%;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.cart_summary >div >div{
+    width:70%;
+    /* border:1px solid red; */
+    margin-left: 25px;
+    font-size: 12px;
+    padding:10px;
+    line-height: 25px;
+}
+
+
+/* --------------  RIGHT PART OF BODY---------- */
+
+
+.right_payment_container{
+    width:60%;
+    height:90%;
+    /* border:1px solid blue; */
+    padding:15px;
+}
+
+.payment_method{
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color:rgb(47, 47, 47);
+}
+
+.payment_method_box{
+    display: flex;
+    height:auto;
+    width:100%;
+    background-color: white;
+    border-radius: 20px;
+    padding:15px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.payment_method_box >div:first-child{
+   width:25%;
+   height:100%;
+   line-height: 50px;
+   background-color:rgb(247, 243, 237);
+   font-size: 15px;
+   font-weight: bold;
+   color:grey;
+   padding:20px 0 20px 20px;
+   cursor: pointer;
+   border-radius: 10px;
+ 
+}
+
+.payment_method_box >div:first-child > p:hover{
+    background-color: white;
+    /* margin-left: 15px; */
+    padding-left: 15px;
+    border-radius: 10px;
+}
+.payment_method_box >div:last-child{
+   width:75%;
+   height:385px;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+   border-radius: 10px;
+   border-radius: 15px;
+}
+
+
+
+
+/* -----------PAYMENT JAVA PART---------- */
+
+
+
+
+.payment_method_box >div:last-child >IMG{
+    width:10%;
+    display:inline;
+    background-color: blue;
+}
+.payment_method_box >div:last-child >p{
+    /* display:inline; */
+    margin:0px 0 0 30px;
+}
+
+
