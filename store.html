@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./style/toggle.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/store.css">
     <style>
         *{
             margin: 0px;
             padding: 0px;
+            font-family: Roboto,sans-serif;;
         }
         ::-webkit-scrollbar{
             width: 12px;
@@ -27,155 +29,6 @@
             background-clip: content-box;
 
         }
-        #subheading{
-            display: flex;
-            align-items: center;
-            /* width: 100%; */
-            padding: 0px 40px;
-            height: 50px;
-            margin-top: 169px;
-            background-color: rgb(227, 227, 227);
-        }
-        #subheading-content{
-            width: 20%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            font-size: 21px;
-        }
-
-        #page-heading{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 25%;
-            margin: auto;
-            margin-top: 23px;
-        }
-        .stroke{
-            background-color: pink;
-            width: 72px;
-            height: 4px;
-        }
-
-        #page-content{
-            height: 490px;
-            display: flex;
-            width: 85%;
-            margin: auto;
-            margin-top: 23px;
-            border: 1px solid red;
-        }
-
-        #page-content-data{
-            width: 40%;
-            border: 1px solid black;
-        }
-        #page-content-data-search{
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            justify-content: space-around;
-            box-sizing: border-box;
-            padding: 8px 12px;
-            height: 18%;
-        }
-        #page-content-data-search>input{
-            width: 90%;
-            display: block;
-            margin: auto;
-            height: 30%;
-            padding: 6px;
-            border-radius: 5px ;
-            font-size: 21px;
-            border: 1px solid red;
-            background-color: rgb(228, 228, 228);
-        }
-        #page-content-data-scroll{
-            height: 82%;
-            overflow: auto;
-            background-color: cadetblue;
-        }
-
-        .page-content-item{
-            display: flex;
-            width: 90%;
-            margin: auto;
-            border: 1px solid black;
-            box-sizing: border-box;
-            margin-top: 18px;
-            line-height: 1.5;
-
-        }
-        .page-content-item>div:nth-child(1){
-            margin-right: 18px;
-            width: 10%;
-        }
-        .page-content-item>div>img{
-            width: 100%;
-        }
-        .page-content-item>div>div{
-            display: flex;
-            justify-content: space-between;
-        }
-        #page-content-map{
-            width: 60%;
-        }
-
-        #page-content-map>iframe{
-            width: 100%;
-            height: 100%;
-        }
-
-        #email{
-            text-align: center;
-            width: 50%;
-            margin: auto;
-            margin-top: 34px;
-        }
-        #email>div{
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 34px;
-            margin-top: 23px;
-
-        }
-        .email-stroke{
-            width: 20%;
-            height: 2px;
-            background-color: red;
-        }
-        #email-box{
-            height: 27px;
-        }
-        #email-box>input{
-            width: 80%;
-            height: 100%;
-            padding: 6px;
-            border-radius: 5px 0px 0px 5px;
-            font-size: 21px;
-            border: 1px solid red;
-            background-color: rgb(228, 228, 228);
-        }
-        #email-box>input:focus{
-            border: none;
-            outline: none;
-        }
-        #email-box>button{
-            width: 20%;
-            height: 151%;
-            padding: 6px;
-            border-radius: 0px 5px 5px 0px;
-            font-size: 21px;
-            border: 1px solid red;
-        }
-        #footer{
-            background-color: rgb(21, 29, 35);
-            height: 200px;
-        }
 
     </style>
 </head>
@@ -183,12 +36,14 @@
 
     <div id="NAVBARFix" >
         <div id="navbar">
-            <img  src="C:\Users\harsh\OneDrive\Desktop\Cosmic\COSMIC-LOGO.png" alt="LOGO" >
-            <input  id="searchBar" type="text" placeholder="Type Here...  "  >
-            <button> <img src="https://img.icons8.com/dusk/2x/search.png" alt="searchImg"> </button>
+            <img  src="https://i.postimg.cc/GBXyCkYD/Whats-App-Image-2022-12-13-at-19-48-24-removebg-preview.png" alt="LOGO" >
+            <div id="nav-search">
+                <input  id="searchBar" type="text" placeholder="Type Here...  "  >
+                <button> <img src="https://img.icons8.com/dusk/2x/search.png" alt="searchImg"> </button>
+            </div>
             <div id="Login" >
-                   <img class="Icons" src="https://img.icons8.com/ios-glyphs/2x/user.png" >
-                   <p>Login/Register</p>
+                <p>Login/Register</p>
+                <img class="Icons" src="https://img.icons8.com/ios-glyphs/2x/user.png" >
             </div>
             <div id="RightIcons" >
                  <img id="favorite" src="https://img.icons8.com/material-rounded/2x/hearts.png" alt="">
@@ -200,7 +55,7 @@
         </div>
         <div  id="navFilters"  >
             <ul>
-                <li> <img src="https://img.icons8.com/external-yogi-aprelliyanto-outline-color-yogi-aprelliyanto/2x/external-makeup-activity-and-hobbies-yogi-aprelliyanto-outline-color-yogi-aprelliyanto.png" alt=""> MAKEUP
+                <li>  MAKEUP
                     <div class="subManu-make" > 
                         <ul>  <h4>EYES </h4>  
                             <li>EYELINER</li>
@@ -223,9 +78,7 @@
                     </div>
                 
                 </li>
-                <li> <img src="https://img.icons8.com/office/2x/cosmetic-brush.png" alt=""> BRUSHES
-                
-                
+                <li> BRUSHES
                     <div class="subManu-make" > 
                         <ul> <h4>FACE BRUSHES</h4>
                             <li>Blend Trend Face Brush - 001 Blush</li>
@@ -241,11 +94,8 @@
                         </ul>
                         
                     </div>
-                
-                
-                
                 </li>
-                <li> <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/2x/external-skin-care-skincare-flaticons-lineal-color-flat-icons-4.png" alt="">  SKIN CARE
+                <li>SKIN CARE
                 
                     <div class="subManu-make" > 
                         <ul> 
@@ -261,7 +111,7 @@
                 
                 
                 </li>
-                <li> <img src="https://img.icons8.com/office/2x/packaging.png" alt=""> GIFTING
+                <li>GIFTING
                 
                     <div class="subManu-make" > 
                         <ul> 
@@ -274,7 +124,7 @@
                     </div>
                 
                 </li>
-                <li> <img src="https://img.icons8.com/doodle/2x/blogger.png" alt=""> BLOG
+                <li>BLOG
                 
                     <div class="subManu-make" > 
                         <ul> 
@@ -287,8 +137,8 @@
                     </div>
                 
                 </li>
-                <li> <img src="https://img.icons8.com/office/2x/discount.png" alt=""> OFFERS</li>
-                <li> <img src="https://img.icons8.com/office/2x/online-store.png" alt=""> STORES</li>
+                <li>OFFERS</li>
+                <li>STORES</li>
             </ul>
       </div>
     </div>
@@ -296,20 +146,25 @@
         <div id="subheading-content">
             <div>Home</div>
             <svg height="50%" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="KeyboardArrowRightIcon"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg>
-            <div>STORES</div>
+            <div>Stores</div>
         </div>
     </div>
 
     <div id="page-heading">
         <div class="stroke"></div>
-        <h1>Stores</h1>
+        <h1>STORES</h1>
         <div class="stroke"></div>
     </div>
 
     <div id="page-content">
         <div id="page-content-data">
             <div id="page-content-data-search">
-                <input type="text" placeholder="Search Sugar Stores">
+                <div>
+                    <input type="text" placeholder="Search Sugar Stores">
+                    <img src="	https://in.sugarcosmetics.com/Direction.svg" alt="">
+                    <img src="	https://in.sugarcosmetics.com/CurrentLocation.svg" alt="">
+
+                </div>
                 <div id="toggle-button">
                     <div>
                         <input type="checkbox" id="exclusive-store" checked>
@@ -320,7 +175,7 @@
                     <div>
                         <input type="checkbox" id="shop-in-shop" checked>
                         <label for="shop-in-shop"></label>
-                        <label for="">Exclusive Store</label>
+                        <label for="">Shop In Shop</label>
 
                     </div>
                 </div>
@@ -343,104 +198,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-content-item">
-                    <div>
-
-                        <img src="	https://in.sugarcosmetics.com/shop.png" alt="">
-                    </div>
-                    <div>
-                        <h3>New Mamta General Stores</h3>
-                        <h3>Hanuman Nagar, Medical Square</h3>
-                        <div>
-                            <p>View on Google Map</p>
-                            <p>share</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -449,17 +206,19 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d961074.125684389!2d77.70037975302964!3d12.896514946051328!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1671010112811!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-
-    <div id="email">
-        <div>
-            <div class="email-stroke"></div>
-            <h2>LET’S STAY IN TOUCH</h2>
-            <div class="email-stroke"></div>
-        </div>
-        <h3>Get the latest beauty tips straight to your inbox. Can’t wait to connect!</h3>
-        <div id="email-box">
-            <input type="text" placeholder="Enter Email">
-            <button>SUBSCRIBE</button>
+    <div id="outter-email">
+        <div id="email">
+            <div>
+                <div class="email-stroke"></div>
+                <h2>LET’S STAY IN TOUCH</h2>
+                <div class="email-stroke"></div>
+            </div>
+            <h3>Get the latest beauty tips straight to your inbox. Can’t wait to connect!</h3>
+            <div id="email-box">
+                <input type="text" placeholder="Enter Email">
+                <button>SUBSCRIBE</button>
+            </div>
+    
         </div>
 
     </div>
@@ -536,4 +295,5 @@
     </div>
     
 </body>
+<script src="./javascript/store.js"></script>
 </html>
