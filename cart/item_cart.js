@@ -9,3 +9,13 @@ bonus.addEventListener("click",function(){
     // empty_render();
    }
 })
+
+
+
+
+// -----------way to payment page---------
+
+let payment=document.querySelector(".bottomnavbar button");
+payment.addEventListener("click",function(){
+   window.location.href="pay.html";
+})
