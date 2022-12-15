@@ -30,9 +30,19 @@ let imageMID = document.getElementById("showImgmid") ;
 let slide_show_mid = ()=>{
    imageMID.src = imgmidSlideShow[countMID] ;
    countMID++ ;
-   if(countMID==5){
+   if(countMID==4){
       countMID = 0 ;
    }
    
 } 
 setInterval( slide_show_mid , 4500 ) ;
+
+let storePath = document.getElementById("store") ;
+ storePath.addEventListener("click" , ()=>{
+   window.location.href = "store.html" ;
+ })
+ 
+// #toppics>div:nth-child(2) 
+
+
+
