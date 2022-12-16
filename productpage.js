@@ -12,18 +12,7 @@ async function fetchData(){
         // console.log(productData)
         data = [...productData]
         displayData(productData);
-        // console.log(data)
-
-        let obj = {};
-
-        data.forEach(element => {
-          if(obj[element.category]==undefined){
-            obj[element.category]=1;
-          } else {
-            obj[element.category]++
-          }
-        });
-        console.log(obj)
+     
     } catch (error) {
         console.log("bad request")
     }
@@ -123,25 +112,19 @@ for (i = 0; i < acc.length; i++) {
 
 // filtering JS
 
-// let filtering = document.querySelectorAll(".inp");
-// filtering.addEventListener("input",filter);
+let filtering = document.querySelectorAll(".inp");
 
-function filter(event){
+for(let inputs of filtering){
+  inputs.addEventListener("input", (event)=>{
 
-  // let val = document.querySelector(".inp").value;
+    let val = event.target.value;
 
-  let val = document.querySelectorAll(".panel input");
-  
-  val.forEach(element => {
-    console.log(element.value)
-  });
+    if(val == ""){
+      fetch()
+    } else {
+      let filterdata = data.filter((ele)=>ele.category==val);
+      displayData(filterdata);
+    }
 
-  console.log(val);
-  // if(val==""){
-  //   fetchData()
-  // } else {
-  //   let filterdata = data.filter((ele)=>ele.category==val)
-
-  //   console.log(filterdata);
-  // }
+  })
 }
