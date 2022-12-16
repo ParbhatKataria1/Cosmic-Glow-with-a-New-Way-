@@ -1,3 +1,5 @@
+/* 
+
 #NAVBARFix{
     position: fixed ;
     top: 0 ;
@@ -22,15 +24,7 @@
    height: 81px ;
    cursor: pointer;
 }
-#navbar>input{
-    font-size: 17px;
-    margin-left: 50px;
-    height: 35px ;
-    width: 450px ;
-    border-color: black ;
-    border-radius: 10px ;
-    box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset;
-}
+
 #navbar>button{
     
     width:50px ;
@@ -137,6 +131,37 @@ color: #ff6186;
 border-bottom: none;
 }
 
+
+*/
+/* #NAVBARFix{
+    position: fixed ;
+    top: 0 ;
+    width: 100%;
+    background-color: #f5c7d2;
+} */
+
+#navbar input{
+    font-size: 17px;
+    height: 35px ;
+    width: 450px ;
+    border: 1px solid black ;
+    border-radius: 10px ;
+    box-shadow: rgb(225, 225, 225) 0px -15px 15px -15px inset;
+}
+#navbar button:hover{
+    cursor: pointer; 
+    background-color: #ff6186;
+    border-color: white ;
+}
+#RightIcons>img:hover ,#Login:hover{
+    background-color:#ff6186 ;
+    color: white;
+    border: 1px solid rgb(255, 255, 255) ;
+    cursor: pointer;
+  }
+  #RightIcons>img:hover{
+    box-shadow: rgba(255, 105, 200, 0.4) 0px 5px, rgba(255, 86, 193, 0.3) 0px 10px, rgba(255, 73, 188, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(255, 66, 186, 0.05) 0px 25px;
+  }
   #TopInterval{
     padding-top: 168px ;
     display: flex ; 
@@ -146,15 +171,15 @@ border-bottom: none;
   }
   #showImg{
     height: 400px ;
-    width: 98.5%  ;
+    width: 100%  ;
     
   }
-  #TopInterval>button{
+  #TopInterval button{
    background-color:#ff6186;
    color: black;
    border-color:#ff6186 ;
   }
-  #TopInterval>button:hover{
+  #TopInterval button:hover{
     cursor: pointer;
     background-color: black ;
     color: #ff6186;
@@ -195,7 +220,10 @@ border-bottom: none;
   flex-direction: column; 
   gap: 35px ;
 }
-#hotdeals>div:nth-child(2)>img ,#toppics>div:nth-child(2)>img , #cosmicblog>div:nth-child(2)>img {
+#explore{
+    margin-bottom: 50px ;
+}
+#hotdeals>div:nth-child(2) a>img ,#toppics>div:nth-child(2) a>img , #cosmicblog>div:nth-child(2) a>img {
     height: 310px ;
     border-radius: 5px ;
 }
@@ -227,11 +255,16 @@ border-bottom: none;
  gap: 25px ;
  margin: 40px ;
 }
-#taglineSec>img , #refer>img , #midInterval>img , #this img{
+#taglineSec>iframe , #refer>img , #midInterval>img , #this img{
    
     border-radius: 15px;
 }
-#hotdeals>div:nth-child(2)>img:hover , #toppics>div:nth-child(2)>img:hover , #showImgmid:hover   , #refer>img:hover ,#taglineSec>img:hover , #this img:hover ,#cosmicblog>div:nth-child(2)>img:hover ,#explore>div:nth-child(2)>img:hover{
+#taglineSec>iframe {
+    height: 400px;
+    width: 90%;
+    margin: auto;
+}
+#hotdeals>div:nth-child(2)>img:hover , #toppics>div:nth-child(2) a>img:hover , #showImgmid:hover   , #refer>img:hover ,#taglineSec>iframe:hover , #this img:hover ,#cosmicblog>div:nth-child(2) a>img:hover ,#explore>div:nth-child(2)>img:hover{
       cursor: pointer;
       box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
       
@@ -258,7 +291,7 @@ border-bottom: none;
 
 #email{
     text-align: center;
-    width: 55%;
+    width: 70%;
     padding: 50px;
     margin: auto;
     background-image: url("https://www.harrisons1863.com/wp-content/uploads/95102_1-274x274.jpg");

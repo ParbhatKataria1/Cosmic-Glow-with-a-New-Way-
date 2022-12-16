@@ -1,3 +1,70 @@
+
+
+// ( async ()=>{
+
+// try {
+//    let problem1 = await fetch("https://jsonplaceholder.typicode.com/todos") ;
+  
+//    let data = await problem1.json() ;
+//    //console.log(data) ;
+//    showme(data) ;
+   
+
+
+// }catch(error){
+// alert(error) ;
+// console.log(error)
+// }
+// })() ;
+
+// let displayItem  =  document.querySelector("#frame") ;
+
+// function showme( data ){
+
+// data.forEach( (element) => {
+
+
+//    if( element.completed === false ){
+
+//        let divu = document.createElement("div") ;
+//        let userid =  document.createElement("p") ;
+//        userid.innerText = `UserId: ${element.userId}` ;
+//        let title =  document.createElement("p") ;
+//        title.innerText = `title: ${element.title}` ;
+
+//         divu.append(userid , title) ;
+//         displayItem.append(divu) ;
+//    }
+// }) ;
+
+// }
+
+
+
+
+
+
+
+
+
+
+// let url = "https://6369e3cdc07d8f936d8db99f.mockapi.io/career" ;
+
+
+// async function fetchApi(){
+     
+//    try{
+//          let fetchrequest = await fetch(url) ;
+//            let Data = await fetchrequest.json() ;
+//            console.log(Data) ;
+
+//    }catch(error){
+//       alert("404 Not Found")
+//    }
+// }
+//fetchApi() ;
+
+
 let imgTopSlideShow = [ "https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Ff8a41835-0598-46e8-ba2c-72e885291eb0.jpg&w=1920&q=75"
   ,"https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F1e69c5f7-2df9-4c42-bf08-22b6b68779e0.jpg&w=1920&q=75" 
  , "https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fa7bfdf05-ad0e-4c24-ab48-7ff64e9115b8.jpg&w=1920&q=75" 
@@ -42,7 +109,24 @@ let storePath = document.getElementById("store") ;
    window.location.href = "store.html" ;
  })
  
+
+
+let cartPath = document.getElementById("cart") ;
+ cartPath.addEventListener("click" , ()=>{
+   window.location.href = "./cart/empty_cart.html"   ;
+ })
+
+
+//  let searchBtn = document.getElementById("searchbtn") ;
+//  searchBtn.addEventListener("click" , ()=>{
+//     let searched = document.getElementById("searchBar").value ;
+
+//     sessionStorage.setItem("search-History" , searched ) ;
+//    //  sessionStorage.getItem("search-History") ;
+//     console.log( typeof sessionStorage.getItem("search-History")) ;
+//  })
+// JSON.stringify(searched)
+
+
+ 
 // #toppics>div:nth-child(2) 
-
-
-
