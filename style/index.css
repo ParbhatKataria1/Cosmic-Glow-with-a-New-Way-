@@ -1,3 +1,4 @@
+
 /* 
 
 #NAVBARFix{
@@ -214,6 +215,100 @@ border-bottom: none;
     margin-top: 4% ;
 }
 
+#outterBestSellCards{
+display: flex;
+align-items: center;
+width: 90%;
+margin: auto;
+}
+
+.arrow{
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 23px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow>svg{
+    fill: #fc2779;
+}
+#outterBestSellCards:hover .arrow{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+#bestSellCards{
+    /* border: 1px solid white; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 200px; */
+}
+
+.bestSellCardsItem{
+    width: 23%;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 1.7;
+    background-color: white;
+    border-radius: 9px;
+
+    
+}
+
+.bestSellCardsItem p{
+    font-size: 14px;
+}
+
+.bestSellCardsItem img{
+    width: 80%;
+    height: 200px;
+    /* object-fit: contain; */
+    display: block;
+    margin: auto;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.bestSellCardsItem>div:nth-child(4){
+    /* border: 3px solid red; */
+    height: 80px;
+    /* background-color: #ff6186; */
+
+}
+#heart-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#heart-icon>div{
+    border: 2px solid black;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#heart-icon>div svg{
+    display: block;
+    padding: 7px;
+    fill: black;
+    
+}
+#heart-icon>button{
+    padding: 11px;
+    border-radius: 9px;
+    cursor: pointer;
+    background-color: #806868;
+    color: white;
+}
 
 #hotdeals , #toppics , #cosmicblog , #explore{
   display: flex ;

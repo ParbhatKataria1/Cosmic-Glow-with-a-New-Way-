@@ -8,11 +8,12 @@
     position: fixed ;
     top: 0 ;
     width: 100%;
-    background-color: #F7BBC9 ;
+    background-color: #F7BBC9;;
+    z-index: 1;
 }
 
 #navbar{
-    display: flex ; 
+    display: flex ;
     justify-content: space-between;
     width: 97%;
     margin: auto;
