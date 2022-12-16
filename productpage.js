@@ -11,7 +11,19 @@ async function fetchData(){
         productData = await fetch(url).then((res)=>res.json());
         // console.log(productData)
         data = [...productData]
-        displayData(productData)
+        displayData(productData);
+        // console.log(data)
+
+        let obj = {};
+
+        data.forEach(element => {
+          if(obj[element.category]==undefined){
+            obj[element.category]=1;
+          } else {
+            obj[element.category]++
+          }
+        });
+        console.log(obj)
     } catch (error) {
         console.log("bad request")
     }
@@ -107,4 +119,29 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
+}
+
+// filtering JS
+
+// let filtering = document.querySelectorAll(".inp");
+// filtering.addEventListener("input",filter);
+
+function filter(event){
+
+  // let val = document.querySelector(".inp").value;
+
+  let val = document.querySelectorAll(".panel input");
+  
+  val.forEach(element => {
+    console.log(element.value)
+  });
+
+  console.log(val);
+  // if(val==""){
+  //   fetchData()
+  // } else {
+  //   let filterdata = data.filter((ele)=>ele.category==val)
+
+  //   console.log(filterdata);
+  // }
 }
