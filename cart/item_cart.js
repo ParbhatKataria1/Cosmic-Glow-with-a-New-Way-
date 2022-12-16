@@ -19,3 +19,6 @@ let payment=document.querySelector(".bottomnavbar button");
 payment.addEventListener("click",function(){
    window.location.href="pay.html";
 })
+
+
+

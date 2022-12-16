@@ -339,6 +339,7 @@ border-bottom: none;
    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
    border-radius: 10px;
    border-radius: 15px;
+   
 }
 
 
@@ -347,16 +348,168 @@ border-bottom: none;
 /* -----------PAYMENT JAVA PART---------- */
 
 
-
-
-.payment_method_box >div:last-child >IMG{
-    width:10%;
-    display:inline;
-    background-color: blue;
+.payment_checkout{
+    line-height: 30px;
+    margin-left: 25px;
 }
-.payment_method_box >div:last-child >p{
-    /* display:inline; */
-    margin:0px 0 0 30px;
+
+.payment_checkout>p:nth-child(3){
+    color:grey;
+    font-size:15px;
 }
+
+.payment_checkout>button{
+    display: block;
+    padding:10px 50px;
+    cursor: pointer;
+    background-color: #de8293;
+    border:1px solid black;
+    border-radius: 10px;
+    color:white;
+    font-weight: bold;
+    font-size: inherit;
+}
+
+.upi_payment{
+    line-height: 35px;
+}
+
+.upi_payment > p{
+    margin-top: 20px;
+    margin-left: 25px;
+    color:gray;
+}
+
+.upi_payment >div{
+    width:100%;
+    height:15px;
+    display: inline;
+}
+.upi_payment >input{
+    display: block;
+    padding:10px 150px;
+    margin-left:15%;
+    border-radius: 10px;
+    border:2px solid #ff6186;
+}
+.upi_payment >div >img{
+   margin-left: 25%;
+    width:50%;
+}
+
+.upi_payment > button{
+    margin-top: 30px;
+    padding:10px 50px;
+    background-color:#de8293;
+    border:1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left:27%;
+    color:white;
+    cursor: pointer;
+}
+
+.upi_payment > button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cardless_emi >div{
+    width:30%;
+    height:40px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+    padding:20px;
+    margin:30px 0px 20px 50px;
+    display: flex;
+}
+
+.cardless_emi >div >div{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.cardless_emi >button{
+    display: block;
+    padding:10px 50px;
+    margin-left: 50px;
+    cursor: pointer;
+    background-color: #de8293;
+    border:1px solid black;
+    border-radius: 10px;
+    color:white;
+    font-weight: bold;
+    font-size: inherit;
+}
+
+.cardless_emi >button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cardless_emi >div >div > input{
+    cursor: pointer;
+     width: 15px;
+      height: 15px; 
+}
+
+.debit_card{
+    padding:20px 20px 30px 40px;
+    /* line-height: 40px; */
+}
+
+.debit_card >div:nth-child(1){
+    width:200px;
+    height:40px;
+    display: flex;
+}
+.debit_card >div:nth-child(1) >p{
+    margin-left: 10px;
+    margin-top: 10px;
+    color:grey;
+}
+.debit_card >div:nth-child(1) >img{
+    border-radius: 10px;
+}
+
+.debit_card input{
+    margin-top: 15px;
+    border:1px solid grey;
+    border-radius: 5px;
+}
+.debit_card > input{
+ display: block;
+ padding:10px 180px;
+ font-size: 15px;
+}
+
+.debit_inputs >input{
+    padding:10px 2.6%;
+    font-size: 15px;
+}
+.debit_inputs >input:last-child{
+    margin-left: 20.5%;
+}
+
+.debit_card >button{
+    display: block;
+    padding:10px 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #de8293;
+    border:1px solid black;
+    border-radius: 10px;
+    color:white;
+    font-weight: bold;
+    font-size: inherit;
+}
+
+.debit_card >div:nth-child(2) >img{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.debit_card >div:nth-child(2) >span{
+    font-size: 13px;
+    color:gray;
+}
+
 
 
