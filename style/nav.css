@@ -9,10 +9,11 @@
     top: 0 ;
     width: 100%;
     background-color: #7f6662;;
+    z-index: 1;
 }
 
 #navbar{
-    display: flex ; 
+    display: flex ;
     justify-content: space-between;
     width: 97%;
     margin: auto;

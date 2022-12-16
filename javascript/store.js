@@ -3,7 +3,7 @@
 const posts_data = "https://wild-red-mackerel-tux.cyclic.app/posts?_limit=10";
 
 let main = document.querySelector("#page-content-data-scroll");
-let search_box = document.querySelector("#page-content-data-search>input")
+let search_box = document.querySelector("#page-content-data-search input")
 
 
 window.addEventListener('load', (event) => {
@@ -46,7 +46,7 @@ function render_map_info(data){
     main.innerHTML = newdata;
 }
 
-search_box.addEventListener("change", async ()=>{
+search_box.addEventListener("oninput", async ()=>{
     try {
         console.log(search_box)
         let data = await fetch(posts_data);

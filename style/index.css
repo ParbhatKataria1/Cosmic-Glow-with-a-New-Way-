@@ -1,141 +1,4 @@
-#NAVBARFix{
-    position: fixed ;
-    top: 0 ;
-    width: 100%;
-    z-index: 100;
-}
 
-#navbar{
-    display: flex ; 
-    flex-direction: row ;
-    height: 80px ;
-    gap: 14px;
-    background-color: #F7BBC9;
-    align-items: center ;
-}
-
-#navbar>a>img{
-    height: 80px ;
-    width: 250px;
-}
-#navbar>a>img:hover{
-   height: 81px ;
-   cursor: pointer;
-}
-#navbar>input{
-    font-size: 17px;
-    margin-left: 50px;
-    height: 35px ;
-    width: 450px ;
-    border-color: black ;
-    border-radius: 10px ;
-    box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset;
-}
-#navbar>button{
-    
-    width:50px ;
-    align-items: center ;
-    height: 35px ;
-    border-color: black ;
-    border-radius: 10px ;
-
-}
-#navbar>button:hover{
-    cursor: pointer; 
-    background-color: #ff6186;
-    border-color: white ;
-}
-#navbar>button > img , #navbar>#RightIcons>img , #navbar>#Login>img {
-    height: 30px ;
-}
-#Login{
-    display: flex ;
-    flex-direction: row ;
-    margin-left: 18%;
-    width: 170px ;
-    justify-content: center;
-}
-#Login>img {
-  
-   margin-right: 5px;
-}
-#RightIcons{
-    margin-left: 1%;
-}
-#RightIcons>img:hover ,#Login:hover{
-    background-color:#ff6186 ;
-    color: white;
-    border-radius: 5px ;
-    cursor: pointer;
-  }
- 
-  *{
-    margin: 0 ;
-    padding: 0  ;
- }
-#navFilters{
-   
-    height: 30px ;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    text-align: center;
-    z-index: inherit ;
-
-}
-#navFilters>ul{
-    display: inline-flex ;
-    list-style: none ;
-   
-    background-color: #F7BBC9 ;
-    width: 100%;
-
-}
-#navFilters>ul>li{
-  padding: 15px ;
-  margin: 15px ;
-  width: 130px;
-  margin-left: 20px ;
-}
-#navFilters>ul>li:hover{
-    background-color: #ff6186;
-    color: white;
-    cursor: pointer;
-}
-#navFilters>ul>li>img{
-    height: 25px ;
-    margin-right: 10px;
-}
-.subManu-make {
-display: none ;
-}
-#navFilters>ul>li:hover .subManu-make  {
-
-gap: 5px ;
-display: block ;
-position: absolute ;
-margin-top: 15px ;
-margin-left: -15px ;
-background-color: black;
-}
-#navFilters>ul>li:hover .subManu-make ul{
-display: block ;
-margin: 10px ;
-
-}
-#navFilters>ul>li:hover .subManu-make ul li{
-width: 150px ;
-padding: 15px ;
-border-bottom: 1px double rgb(255, 255, 255);
-color: rgb(200, 200, 200);
-text-align: left;
-background: transparent ;
-}
-#navFilters>ul>li:hover .subManu-make>ul>li:hover{
-color: #ff6186;
-}
-#navFilters>ul>li:hover .subManu-make ul li:last-child{
-border-bottom: none;
-}
 
   #TopInterval{
     padding-top: 168px ;
@@ -189,6 +52,100 @@ border-bottom: none;
     margin-top: 4% ;
 }
 
+#outterBestSellCards{
+display: flex;
+align-items: center;
+width: 90%;
+margin: auto;
+}
+
+.arrow{
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 23px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow>svg{
+    fill: #fc2779;
+}
+#outterBestSellCards:hover .arrow{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+#bestSellCards{
+    /* border: 1px solid white; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 200px; */
+}
+
+.bestSellCardsItem{
+    width: 23%;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 1.7;
+    background-color: white;
+    border-radius: 9px;
+
+    
+}
+
+.bestSellCardsItem p{
+    font-size: 14px;
+}
+
+.bestSellCardsItem img{
+    width: 80%;
+    height: 200px;
+    /* object-fit: contain; */
+    display: block;
+    margin: auto;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.bestSellCardsItem>div:nth-child(4){
+    /* border: 3px solid red; */
+    height: 80px;
+    /* background-color: #ff6186; */
+
+}
+#heart-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#heart-icon>div{
+    border: 2px solid black;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#heart-icon>div svg{
+    display: block;
+    padding: 7px;
+    fill: black;
+    
+}
+#heart-icon>button{
+    padding: 11px;
+    border-radius: 9px;
+    cursor: pointer;
+    background-color: #806868;
+    color: white;
+}
 
 #hotdeals , #toppics , #cosmicblog , #explore{
   display: flex ;
