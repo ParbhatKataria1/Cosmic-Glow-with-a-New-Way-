@@ -11,7 +11,8 @@ async function fetchData(){
         productData = await fetch(url).then((res)=>res.json());
         // console.log(productData)
         data = [...productData]
-        displayData(productData)
+        displayData(productData);
+     
     } catch (error) {
         console.log("bad request")
     }
@@ -107,4 +108,23 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
+}
+
+// filtering JS
+
+let filtering = document.querySelectorAll(".inp");
+
+for(let inputs of filtering){
+  inputs.addEventListener("input", (event)=>{
+
+    let val = event.target.value;
+
+    if(val == ""){
+      fetch()
+    } else {
+      let filterdata = data.filter((ele)=>ele.category==val);
+      displayData(filterdata);
+    }
+
+  })
 }
