@@ -1,7 +1,8 @@
 const sliderURl = "https://6369e3cdc07d8f936d8db99f.mockapi.io/career"
 const mainSection = document.querySelector("#bestSellCards");
 const left_arrow = document.querySelector("#arrow-left");
-const right_arrow = document.querySelector("#arrow-right")
+const right_arrow = document.querySelector("#arrow-right");
+
 
 let countSlider = 0;
 let newdata;
@@ -26,10 +27,13 @@ function forCardData(){
     let arr = [];
     let i = 0;
     while(i<4){
+        countSlider = (countSlider+i)>=newdata.length?0:countSlider
         arr.push(renderCard(countSlider+i++))
     }
     // console.log(arr)
-    mainSection.innerHTML = arr.join(" ")
+    mainSection.innerHTML = arr.join(" ");
+    like_button()
+
 }
 
 function renderCard(i){
@@ -58,6 +62,7 @@ function renderCard(i){
 
 left_arrow.addEventListener("click", ()=>{
     countSlider--;
+    console.log(countSlider)
     if(countSlider<0)countSlider = newdata.length-1;
     forCardData();
 })
@@ -68,6 +73,21 @@ right_arrow.addEventListener("click", ()=>{
     countSlider = countSlider%newdata.length;
     forCardData();
 })
+
+// console.log(heart_icon)
+function like_button(){
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
