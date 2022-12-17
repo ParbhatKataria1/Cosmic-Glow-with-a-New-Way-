@@ -170,7 +170,7 @@ border-bottom: none;
 
 .main_content{
     width:95%;
-    height:110vh;
+    height:auto;
     margin:auto;
     border-radius: 15px;
     background-color: white;
@@ -415,6 +415,51 @@ height:100%;
 .bottomnavbar >div >button:hover{
     padding:12px 150px 12px 150px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.cart_summary_heading{
+    color:rgb(47, 47, 47);
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.cart_detail{
+    width:99%;
+    border:1px dashed black;
+    border-radius: 10px;
+    background-color: white;
+    padding:5px 0px 5px 5px;
+    margin-bottom: 500px;
+}
+.cart_detail >div{
+    width:100%;
+    display: flex;
+    padding:10px;
+}
+.cart_detail >div >img{
+    width:7%;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.cart_detail >div >div{
+    width:70%;
+    /* border:1px solid red; */
+    margin-left: 25px;
+    font-size: 12px;
+    padding:10px;
+    line-height: 25px;
+}
+
 
 
 
