@@ -47,7 +47,7 @@
     height: 35px ;
     width: 450px ;
     /* border-color: rgb(216, 216, 216) ; */
-    border: 1px solid gray;
+    border: 2px solid rgb(170, 170, 170);
     border-radius: 10px ;
     /* box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset; */
 }
