@@ -175,6 +175,32 @@ border-bottom: none;
     width: 100%  ;
     
   }
+
+  #TopInterval{
+    
+    width: 100%;
+    /* height: 300px; */
+  }
+
+  .swiper{
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper img{
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: white;
+  }
+
+  .swiper .swiper-pagination-bullet-active{
+    background: white;
+  }
+
+
   #TopInterval button{
    background-color:#ff6186;
    color: black;
@@ -283,12 +309,12 @@ margin: auto;
     /* background-color: #ff6186; */
 
 }
-#heart-icon{
+.heart-icon{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-#heart-icon>div{
+.heart-icon>div{
     border: 2px solid black;
     border-radius: 9px;
     display: flex;
@@ -296,13 +322,13 @@ margin: auto;
     justify-content: center;
     cursor: pointer;
 }
-#heart-icon>div svg{
+.heart-icon>div svg{
     display: block;
     padding: 7px;
     fill: black;
     
 }
-#heart-icon>button{
+.heart-icon>button{
     padding: 11px;
     border-radius: 9px;
     cursor: pointer;
