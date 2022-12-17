@@ -102,7 +102,7 @@ cards_data.innerHTML = render_cards;
 let checkout_button = document.querySelector(".debit_card >button");
 checkout_button.addEventListener("click",function(){
     alert("Your Order has been placed");
-    window.location.href="index.html"
+    window.location.href="../index.html"
 })
 
 
@@ -110,6 +110,67 @@ checkout_button.addEventListener("click",function(){
 
 
 
+// let url= "https://6370948408218c267e01d3bd.mockapi.io/mens";
+//     fetch(url)
+//     .then((res)=>res.json())
+//     .then((data)=>{
+//         bag=data;
+//         display(data)
+//     })
+//     .catch((err)=>console.log(err));
+
+ 
+//     function display(data){
+//        let cart_summary = document.querySelector(".cart_summary");
+//        cart_summary.innerHTML="";
+//         let array=data.map((item)=>{
+//         return
+//             `<div>
+//        <img width="10%"
+//            src=${data.image} alt="">
+//        <div>
+//            <p>${data.title}</p>
+//            <p>₹${data.price}</p>
+//        </div>
+//    </div>`
+//    cart_summary.innerHTML = array.join("");
+// })
+// console.log(array)
+  // }
+
+function store(){
 
 
+
+
+  mydata=JSON.parse(localStorage.getItem("cart-item"));
+
+
+Displaydata(mydata);
+
+function Displaydata(data){
+    data.map((ele) => {
+        let x =document.createElement("div");
+        let y =document.createElement("div");
+        h2=document.createElement("p");
+        h2.innerText=ele.brand;
+        img=document.createElement("img");
+        img.setAttribute("src",ele.image);
+        h3=document.createElement("p");
+        h3.innerText="Rs."+ele.price;
+        // h4=document.createElement("h5");
+        // h4.innerText=ele.brand;
+    
+
+        x.append(h2,h3);
+        y.append(img,x)
+        document.querySelector(".cart_summary").append(y);
+    });
+        
+}
+
+
+}
+
+store();
 
