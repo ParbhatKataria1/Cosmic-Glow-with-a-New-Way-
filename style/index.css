@@ -359,7 +359,7 @@ margin: auto;
     width: 90%;
     margin: auto;
 }
-#hotdeals>div:nth-child(2)>img:hover , #toppics>div:nth-child(2) a>img:hover , #showImgmid:hover   , #refer>img:hover ,#taglineSec>iframe:hover , #this img:hover ,#cosmicblog>div:nth-child(2) a>img:hover ,#explore>div:nth-child(2)>img:hover{
+#hotdeals>div:nth-child(2) a>img:hover , #toppics>div:nth-child(2) a>img:hover , #showImgmid:hover   , #refer>img:hover ,#taglineSec>iframe:hover , #this img:hover ,#cosmicblog>div:nth-child(2) a>img:hover ,#explore>div:nth-child(2)>img:hover{
       cursor: pointer;
       box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
       
@@ -442,4 +442,11 @@ margin: auto;
 }
 #outterfooter div div h2{
     color: white;
+}
+#navFilters ul li a{
+    text-decoration: none ;
+    color: black;
+}
+.bestSellCardsItem:hover{
+    cursor: pointer;
 }

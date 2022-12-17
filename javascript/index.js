@@ -14,7 +14,7 @@ async function fetchdata(){
         let data = await fetch(sliderURl);
         data = await data.json();
         newdata = data;
-        console.log(data)
+        //console.log(data)
         forCardData()
     } catch (error) {
         alert("unable to fetch the data")
@@ -64,7 +64,7 @@ left_arrow.addEventListener("click", ()=>{
 
 right_arrow.addEventListener("click", ()=>{
     countSlider++;
-    console.log(countSlider)
+   // console.log(countSlider)
     countSlider = countSlider%newdata.length;
     forCardData();
 })
@@ -118,13 +118,65 @@ let storePath = document.getElementById("store") ;
    window.location.href = "store.html" ;
  })
  
-
-
 let cartPath = document.getElementById("cart") ;
  cartPath.addEventListener("click" , ()=>{
    window.location.href = "./cart/empty_cart.html"   ;
  })
 
+ let loginPath = document.getElementById("Login") ;
+ loginPath.addEventListener("click" , ()=>{
+   window.location.href = "log.html"   ;
+ })
 
+
+ let searchbtn = document.getElementById("searchbtn") ;
+ searchbtn.addEventListener("click" , ()=>{
+    let inputValue = document.getElementById("searchBar").value ;
+//    sessionStorage.setItem("searched-history" , JSON.stringify(inputValue)) ;
+//     let test = JSON.parse(sessionStorage.getItem("searched-history")) ;
+    if( inputValue ){
+        sessionStorage.setItem("searched-history" , inputValue ) ;
+        window.location.href = "productpage.html"   ;
+    }else{
+       //alert("please write Something") ;
+    //    searchBar
+    let searchinput = document.getElementById("searchBar") ;
+    searchinput.style.borderColor = "red" ;
+    searchinput.placeholder = "Try 'Lipstick'..." ;
+    }   
+ });
+
+
+
+    // let navbarFliter1 = document.querySelector(`#navFilters ul li:nth-child(1)`) ;
+    // navbarFliter1.addEventListener("click" , ()=>{
+    //   window.location.href = "productpage.html" ;
+    // }) ;
+
+//only working for first UL
+    let navbarFliter2 = document.querySelectorAll(".subManu-make>ul>li") ;
+    for( let i=0 ; i<navbarFliter2.length ; i++){
+        navbarFliter2[i].addEventListener("click" , ()=>{
+        
+            window.location.href = "productpage.html" ;
+          }) ;
+    }
+    // console.log( navbarFliter2)
+    // navbarFliter2.addEventListener("click" , ()=>{
+        
+    //   window.location.href = "productpage.html" ;
+    // }) ;
+
+
+    // let navbarFliter3 = document.querySelector(`#navFilters ul>li:nth-child(3)`) ;
+    // navbarFliter3.addEventListener("click" , ()=>{
+    //   window.location.href = "productpage.html" ;
+    // })
+
+
+    // let navbarFliter4 = document.querySelector(`#navFilters ul>li:nth-child(4)`) ;
+    // navbarFliter4.addEventListener("click" , ()=>{
+    //   window.location.href = "productpage.html" ;
+    // })
 
 
