@@ -5,21 +5,23 @@ let data = [];
 
 let cartItems = JSON.parse(localStorage.getItem("cartProducts")) || []
 
+// fetching the data through api------
+
 async function fetchData(){
 
     try {
         productData = await fetch(url).then((res)=>res.json());
-        // console.log(productData)
+       
         data = [...productData]
         displayData(productData);
-     
+        
     } catch (error) {
         console.log("bad request")
     }
 }
 fetchData()
 
-
+// Displaying the fetched data here
 
 function displayData(allData){
       
@@ -118,7 +120,7 @@ for(let inputs of filtering){
   inputs.addEventListener("input", (event)=>{
 
     let val = event.target.value;
-
+    
     if(val == ""){
       fetch()
     } else {
@@ -127,4 +129,19 @@ for(let inputs of filtering){
     }
 
   })
+}
+
+// Search Input functionality
+
+ let searching = document.querySelector("#searchBar");
+ searching.addEventListener("input",search);
+
+function search(){
+
+  let q = document.querySelector("input").value;
+  let newData = data.filter(function(elem){
+   return elem.title.toLowerCase().includes(q.toLowerCase());
+  })
+  //  console.log(newData)
+displayData(newData)
 }
