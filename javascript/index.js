@@ -6,14 +6,43 @@ const empty_heart = `<svg width="24" height="24" xmlns="http://www.w3.org/2000/s
 
 
 const mainSection = document.querySelector("#bestSellCards");
+const just_main_section = document.querySelector("#just_bestSellCards");
+const buy_main_section = document.querySelector("#buy_bestSellCards");
+const gift_main_section = document.querySelector("#gift_bestSellCards");
+const super_main_section = document.querySelector("#super_bestSellCards");
+const skin_main_section = document.querySelector("#skin_bestSellCards");
+const merch_main_section = document.querySelector("#merch_bestSellCards");
+
 const left_arrow = document.querySelector("#arrow-left");
+const just_left_arrow = document.querySelector("#just-arrow-left");
+const buy_left_arrow = document.querySelector("#buy-arrow-left");
+const gift_left_arrow = document.querySelector("#gift-arrow-left");
+const super_left_arrow = document.querySelector("#super-arrow-left");
+const skin_left_arrow = document.querySelector("#skin-arrow-left");
+const merch_left_arrow = document.querySelector("#merch-arrow-left");
+
 const right_arrow = document.querySelector("#arrow-right");
+const just_right_arrow = document.querySelector("#just-arrow-right");
+const buy_right_arrow = document.querySelector("#buy-arrow-right");
+const gift_right_arrow = document.querySelector("#gift-arrow-right");
+const super_right_arrow = document.querySelector("#super-arrow-right");
+const skin_right_arrow = document.querySelector("#skin-arrow-right");
+const merch_right_arrow = document.querySelector("#merch-arrow-right");
+
+
 const search_button = document.querySelector("#searchbtn");
 const search_input = document.querySelector("#searchBar");
 
 
 
-let countSlider = 0;
+let countSlider = {a:0};
+let justCountSlider = {a:0};
+let buyCountSlider  = {a:0};
+let giftCountSlider = {a:0};
+let superCountSlider = {a:0};
+let skinCountSlider = {a:0};
+let merchCountSlider = {a:0};
+
 let newdata;
 window.addEventListener("load", ()=>{
     fetchdata();
@@ -25,18 +54,24 @@ async function fetchdata(){
         data = await data.json();
         newdata = data;
         //console.log(data)
-        forCardData()
+        forCardData(mainSection, countSlider);
+        forCardData(just_main_section, justCountSlider);
+        forCardData(buy_main_section, buyCountSlider);
+        forCardData(gift_main_section, giftCountSlider);
+        forCardData(super_main_section, superCountSlider);
+        forCardData(skin_main_section, skinCountSlider);
+        forCardData(merch_main_section, merchCountSlider);
     } catch (error) {
         alert("unable to fetch the data")
     }
 }
 
-function forCardData(){
+function forCardData(mainSection, countSlider){
     let arr = [];
     let i = 0;
     while(i<4){
-        countSlider = (countSlider+i)>=newdata.length?0:countSlider
-        arr.push(renderCard(countSlider+i++))
+        countSlider.a = (countSlider.a+i)>=newdata.length?0:countSlider.a
+        arr.push(renderCard(countSlider.a+i++))
     }
     // console.log(arr)
     mainSection.innerHTML = arr.join(" ");
@@ -69,25 +104,129 @@ function renderCard(i){
 }
 
 left_arrow.addEventListener("click", ()=>{
-    countSlider--;
-    console.log(countSlider)
-    if(countSlider<0)countSlider = newdata.length-1;
-    forCardData();
+    countSlider.a--;
+    console.log(countSlider.a)
+    if(countSlider.a<0)countSlider.a = newdata.length-4;
+    forCardData(mainSection, countSlider);
 })
 
 right_arrow.addEventListener("click", ()=>{
-    countSlider++;
+    countSlider.a++;
    // console.log(countSlider)
-    countSlider = countSlider%newdata.length;
-    forCardData();
+   countSlider.a = countSlider.a%newdata.length;
+    forCardData(mainSection, countSlider);
 })
+
+// for the just slider
+just_left_arrow.addEventListener("click", ()=>{
+    justCountSlider.a--;
+    console.log(justCountSlider.a)
+    if(justCountSlider.a<0)justCountSlider.a = newdata.length-4;
+    forCardData(just_main_section, justCountSlider);
+})
+
+just_right_arrow.addEventListener("click", ()=>{
+    justCountSlider.a++;
+   // console.log(countSlider)
+   justCountSlider.a = justCountSlider.a%newdata.length;
+    forCardData(just_main_section, justCountSlider);
+})
+
+
+// for the buy slider
+buy_left_arrow.addEventListener("click", ()=>{
+    buyCountSlider.a--;
+    console.log(buyCountSlider.a)
+    if(buyCountSlider.a<0)buyCountSlider.a = newdata.length-4;
+    forCardData(buy_main_section, buyCountSlider);
+})
+
+buy_right_arrow.addEventListener("click", ()=>{
+    buyCountSlider.a++;
+   // console.log(countSlider)
+   buyCountSlider.a = buyCountSlider.a%newdata.length;
+    forCardData(buy_main_section, buyCountSlider);
+})
+
+
+// for the gifting slider
+
+
+gift_left_arrow.addEventListener("click", ()=>{
+    giftCountSlider.a--;
+    console.log(giftCountSlider.a)
+    if(giftCountSlider.a<0)giftCountSlider.a = newdata.length-4;
+    forCardData(gift_main_section, giftCountSlider);
+})
+
+gift_right_arrow.addEventListener("click", ()=>{
+    giftCountSlider.a++;
+   // console.log(countSlider)
+   giftCountSlider.a = giftCountSlider.a%newdata.length;
+    forCardData(gift_main_section, giftCountSlider);
+})
+
+// this is for the super slider
+
+gift_left_arrow.addEventListener("click", ()=>{
+    giftCountSlider.a--;
+    console.log(giftCountSlider.a)
+    if(giftCountSlider.a<0)giftCountSlider.a = newdata.length-4;
+    forCardData(super_main_section, superCountSlider);
+})
+
+super_right_arrow.addEventListener("click", ()=>{
+    superCountSlider.a++;
+   // console.log(countSlider)
+   superCountSlider.a = superCountSlider.a%newdata.length;
+    forCardData(super_main_section, superCountSlider);
+})
+
+
+// this is for skin slider
+
+skin_left_arrow.addEventListener("click", ()=>{
+    skinCountSlider.a--;
+    console.log(skinCountSlider.a)
+    if(skinCountSlider.a<0)skinCountSlider.a = newdata.length-4;
+    forCardData(skin_main_section, skinCountSlider);
+})
+
+skin_right_arrow.addEventListener("click", ()=>{
+    skinCountSlider.a++;
+   // console.log(countSlider)
+   skinCountSlider.a = skinCountSlider.a%newdata.length;
+    forCardData(skin_main_section, skinCountSlider);
+})
+
+
+// merch section
+
+merch_left_arrow.addEventListener("click", ()=>{
+    merchCountSlider.a--;
+    console.log(merchCountSlider.a)
+    if(merchCountSlider.a<0)merchCountSlider.a = newdata.length-4;
+    forCardData(merch_main_section, merchCountSlider);
+})
+
+merch_right_arrow.addEventListener("click", ()=>{
+    merchCountSlider.a++;
+   // console.log(countSlider)
+   merchCountSlider.a = merchCountSlider.a%newdata.length;
+    forCardData(merch_main_section, merchCountSlider);
+})
+
+
+
+
+
+
 
 // console.log(heart_icon)
 function like_button(){
     let likeButton_htmls = document.querySelectorAll(".heart-icon>div");
     for(let likeButton_html of likeButton_htmls){
         likeButton_html.addEventListener("click", (e)=>{
-            console.log(likeButton_html)
             let temp = likeButton_html.dataset.id;
             if(temp == 0){
                 likeButton_html.innerHTML = `${filled_heart}`;
@@ -98,10 +237,9 @@ function like_button(){
             else if(temp==1){
                 likeButton_html.innerHTML = `${empty_heart}`
                 likeButton_html.setAttribute('data-id' , '0');
-                console.log(temp)
             }
             // console.log(e.target)
-            // forCardData()
+            forCardData()
         })
     }
 }

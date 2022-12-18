@@ -103,16 +103,29 @@
                         </div>
                     </div>
                 </div>
-                <button id="searchbtn" > <img src="https://img.icons8.com/dusk/2x/search.png" alt="searchImg"> </button>
+                <button id="searchbtn" > <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="50" height="50"
+                    viewBox="0 0 50 50">
+                    <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+                    </svg> </button>
             </div>
             <div id="Login">
                 <p>Login/Register</p>
                 <img class="Icons" src="https://img.icons8.com/ios-glyphs/2x/user.png" >
             </div>
             <div id="RightIcons">
-                 <img id="favorite" src="https://img.icons8.com/material-rounded/2x/hearts.png" alt="">
-                 <img id="cart" src="https://img.icons8.com/material-sharp/2x/shopping-cart.png" alt="">
-                 <img id="offer" src="https://img.icons8.com/ios-glyphs/2x/discount.png" alt="">
+                <div>
+
+                    <img id="favorite" src="https://img.icons8.com/material-rounded/2x/hearts.png" alt="">
+                </div>
+                <div>
+
+                    <img id="cart" src="https://img.icons8.com/material-sharp/2x/shopping-cart.png" alt="">
+                </div>
+                <div>
+
+                    <img id="offer" src="https://img.icons8.com/ios-glyphs/2x/discount.png" alt="">
+                </div>
     
             </div>
     
@@ -231,11 +244,11 @@
     
     <div id="bestSlr">
         <div class="headings" >   <span  > ----</span> BESTSELLERS <span > ---- </span> </div> 
-        <div id="outterBestSellCards">
+        <div id="outterBestSellCards" class="styleOutterBestSellCards">
             <div class="arrow" id="arrow-left">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
             </div>
-            <div id="bestSellCards">
+            <div id="bestSellCards" class="styleBestSellCards">
                 
             </div>
              <div class="arrow" id="arrow-right">
@@ -265,15 +278,29 @@
      </div>
 
     <div id="justin">
-    <div class="headings" >   <span  > ----</span>JUST-IN<span > ---- </span> </div>
-    <div id="justinCards"  >
+    <div class="headings">   <span  > ----</span>JUST-IN<span > ---- </span> </div>
+    <div id="justinCards">
+        <div id="just_outterBestSellCards" class="styleOutterBestSellCards">
+            <div class="arrow" id="just-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+            </div>
+            <div id="just_bestSellCards" class="styleBestSellCards">
+                
+            </div>
+             <div class="arrow" id="just-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+             </div>
+        </div>
     </div>
      </div>
 
     <div id="taglineSec">
         <div class="headings" >   <span  > -</span>GLOW with THE NEW WAY<span > - </span> </div>
         <!-- <img src="https://in.sugarcosmetics.com/_next/image?url=https://d32baadbbpueqt.cloudfront.net/Homepage/b16a42b1-3e35-42bb-b122-a517e75c490e.jpg&w=1920&q=75" alt="img"> -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vrhYCqgLnDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vrhYCqgLnDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
      </div>
 
     <div id="toppics" >
@@ -297,14 +324,34 @@
     <div id="buynow">
         <div class="headings" >   <span  > -</span>BUY NOW PAY LATER<span > - </span> </div>
         <div id="buynowCards" >
-
+            <div id="buy_outterBestSellCards" class="styleOutterBestSellCards">
+                <div class="arrow" id="buy-arrow-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                </div>
+                <div id="buy_bestSellCards" class="styleBestSellCards">
+                    
+                </div>
+                 <div class="arrow" id="buy-arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+                 </div>
+            </div>
         </div>
      </div>
     
     <div id="gifting">
         <div class="headings" >   <span  > -</span>GIFTING<span > - </span> </div>
         <div id="giftCards" >
-
+            <div id="gift_outterBestSellCards" class="styleOutterBestSellCards">
+                <div class="arrow" id="gift-arrow-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                </div>
+                <div id="gift_bestSellCards" class="styleBestSellCards">
+                    
+                </div>
+                 <div class="arrow" id="gift-arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+                 </div>
+            </div>
         </div>
      </div>
 
@@ -316,6 +363,17 @@
     <div id="super">
         <div class="headings" >   <span  > -</span>SUPER SAVES<span > - </span> </div>
         <div id="supersaves" >
+            <div id="super_outterBestSellCards" class="styleOutterBestSellCards">
+                <div class="arrow" id="super-arrow-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                </div>
+                <div id="super_bestSellCards" class="styleBestSellCards">
+                    
+                </div>
+                 <div class="arrow" id="super-arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+                 </div>
+            </div>
         </div>
      </div>
 
@@ -327,13 +385,30 @@
     <div id="this">
             <div class="headings" >   <span  > -</span>THIS OR THAT<span > - </span> </div>
             <div>
-                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F7869ecd2-e867-443e-8116-fcbef55cacd8.jpg&w=1920&q=75" alt="img1">
-                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fcd4ea1cf-e663-4cd8-8ff0-fdd91012a232.jpg&w=1920&q=75" alt="img2">
+                <div>
+
+                    <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F7869ecd2-e867-443e-8116-fcbef55cacd8.jpg&w=1920&q=75" alt="img1">
+                </div>
+                <div>
+                    <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fcd4ea1cf-e663-4cd8-8ff0-fdd91012a232.jpg&w=1920&q=75" alt="img2">
+
+                </div>
             </div>
      </div>
     <div id="Skincarebasic">
             <div class="headings" >   <span  > -</span>SKINCARE BASICS<span > - </span> </div>
             <div id="Skincarebasiccards" >
+                <div id="skin_outterBestSellCards" class="styleOutterBestSellCards">
+                    <div class="arrow" id="skin-arrow-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                    </div>
+                    <div id="skin_bestSellCards" class="styleBestSellCards">
+                        
+                    </div>
+                     <div class="arrow" id="skin-arrow-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+                     </div>
+                </div>
             </div>
      </div>
          
@@ -361,16 +436,40 @@
     <div id="marchstation">
             <div class="headings" >   <span  > -</span>MERCH STATION<span > - </span> </div>
             <div id="marchstationcards" >
+                <div id="merch_outterBestSellCards" class="styleOutterBestSellCards">
+                    <div class="arrow" id="merch-arrow-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                    </div>
+                    <div id="merch_bestSellCards" class="styleBestSellCards">
+                        
+                    </div>
+                     <div class="arrow" id="merch-arrow-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+                     </div>
+                </div>
             </div>
      </div>
 
     <div id="explore" >
             <div class="headings" >   <span  > -</span>EXPLORE<span > - </span> </div>
             <div  > 
-                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F97722164-55b4-4030-a9f6-0219a9575a24.jpg&w=1920&q=75" alt="1img">
-                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F52b4f85e-f9e8-465a-a9a4-6f11e6b407aa.jpg&w=1920&q=75" alt="2img">
-                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fa7b72adf-7e02-45c4-a208-552d46eefc4c.jpg&w=1920&q=75" alt="3img">
-                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F88ee8d58-7cc5-450a-953b-aa16ef190d52.jpg&w=1920&q=75" alt="4img">
+                <div>
+                    <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F97722164-55b4-4030-a9f6-0219a9575a24.jpg&w=1920&q=75" alt="1img">
+
+                </div>
+
+                <div>
+                    <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F52b4f85e-f9e8-465a-a9a4-6f11e6b407aa.jpg&w=1920&q=75" alt="2img">
+
+                </div>
+                <div>
+
+                    <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fa7b72adf-7e02-45c4-a208-552d46eefc4c.jpg&w=1920&q=75" alt="3img">
+                </div>
+                <div>
+
+                    <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F88ee8d58-7cc5-450a-953b-aa16ef190d52.jpg&w=1920&q=75" alt="4img">
+                </div>
                  </div>
     
      </div>
