@@ -1,6 +1,31 @@
 /* Navbar CSS */
 
 
+
+
+
+/* mini nav bar */
+.mini-nav{
+  height:40px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  font-size: 17px;
+  margin-bottom: 20px;
+  /* margin-top:170px; */
+}
+.mini-nav > div:nth-child(1)>a{
+  text-decoration: none;
+  color: gray;
+}
+.mini-nav > div:nth-child(3)>a{
+text-decoration: none;
+font-weight: bold;
+}
+
+
 /*  CSS */
 #top_img{
     margin-top: 150px;
