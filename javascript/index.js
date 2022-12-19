@@ -1,19 +1,48 @@
 const sliderURl = "https://6369e3cdc07d8f936d8db99f.mockapi.io/career"
-const filled_heart = `<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 5.72c-2.624-4.517-10-3.198-10 2.461 0 3.725 4.345 7.727 9.303 12.54.194.189.446.283.697.283s.503-.094.697-.283c4.977-4.831 9.303-8.814 9.303-12.54 0-5.678-7.396-6.944-10-2.461z" fill-rule="nonzero"/></svg>`
+const filled_heart = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z"/></svg>`
 const empty_heart = `<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"/></svg>`
 
 
 
 
 const mainSection = document.querySelector("#bestSellCards");
+const just_main_section = document.querySelector("#just_bestSellCards");
+const buy_main_section = document.querySelector("#buy_bestSellCards");
+const gift_main_section = document.querySelector("#gift_bestSellCards");
+const super_main_section = document.querySelector("#super_bestSellCards");
+const skin_main_section = document.querySelector("#skin_bestSellCards");
+const merch_main_section = document.querySelector("#merch_bestSellCards");
+
 const left_arrow = document.querySelector("#arrow-left");
+const just_left_arrow = document.querySelector("#just-arrow-left");
+const buy_left_arrow = document.querySelector("#buy-arrow-left");
+const gift_left_arrow = document.querySelector("#gift-arrow-left");
+const super_left_arrow = document.querySelector("#super-arrow-left");
+const skin_left_arrow = document.querySelector("#skin-arrow-left");
+const merch_left_arrow = document.querySelector("#merch-arrow-left");
+
 const right_arrow = document.querySelector("#arrow-right");
+const just_right_arrow = document.querySelector("#just-arrow-right");
+const buy_right_arrow = document.querySelector("#buy-arrow-right");
+const gift_right_arrow = document.querySelector("#gift-arrow-right");
+const super_right_arrow = document.querySelector("#super-arrow-right");
+const skin_right_arrow = document.querySelector("#skin-arrow-right");
+const merch_right_arrow = document.querySelector("#merch-arrow-right");
+
+
 const search_button = document.querySelector("#searchbtn");
 const search_input = document.querySelector("#searchBar");
 
 
 
-let countSlider = 0;
+let countSlider = {a:0};
+let justCountSlider = {a:0};
+let buyCountSlider  = {a:0};
+let giftCountSlider = {a:0};
+let superCountSlider = {a:0};
+let skinCountSlider = {a:0};
+let merchCountSlider = {a:0};
+
 let newdata;
 window.addEventListener("load", ()=>{
     fetchdata();
@@ -25,18 +54,24 @@ async function fetchdata(){
         data = await data.json();
         newdata = data;
         //console.log(data)
-        forCardData()
+        forCardData(mainSection, countSlider);
+        forCardData(just_main_section, justCountSlider);
+        forCardData(buy_main_section, buyCountSlider);
+        forCardData(gift_main_section, giftCountSlider);
+        forCardData(super_main_section, superCountSlider);
+        forCardData(skin_main_section, skinCountSlider);
+        forCardData(merch_main_section, merchCountSlider);
     } catch (error) {
         alert("unable to fetch the data")
     }
 }
 
-function forCardData(){
+function forCardData(mainSection, countSlider){
     let arr = [];
     let i = 0;
     while(i<4){
-        countSlider = (countSlider+i)>=newdata.length?0:countSlider
-        arr.push(renderCard(countSlider+i++))
+        countSlider.a = (countSlider.a+i)>=newdata.length?0:countSlider.a
+        arr.push(renderCard(countSlider.a+i++))
     }
     // console.log(arr)
     mainSection.innerHTML = arr.join(" ");
@@ -69,25 +104,129 @@ function renderCard(i){
 }
 
 left_arrow.addEventListener("click", ()=>{
-    countSlider--;
-    console.log(countSlider)
-    if(countSlider<0)countSlider = newdata.length-1;
-    forCardData();
+    countSlider.a--;
+    console.log(countSlider.a)
+    if(countSlider.a<0)countSlider.a = newdata.length-4;
+    forCardData(mainSection, countSlider);
 })
 
 right_arrow.addEventListener("click", ()=>{
-    countSlider++;
+    countSlider.a++;
    // console.log(countSlider)
-    countSlider = countSlider%newdata.length;
-    forCardData();
+   countSlider.a = countSlider.a%newdata.length;
+    forCardData(mainSection, countSlider);
 })
+
+// for the just slider
+just_left_arrow.addEventListener("click", ()=>{
+    justCountSlider.a--;
+    console.log(justCountSlider.a)
+    if(justCountSlider.a<0)justCountSlider.a = newdata.length-4;
+    forCardData(just_main_section, justCountSlider);
+})
+
+just_right_arrow.addEventListener("click", ()=>{
+    justCountSlider.a++;
+   // console.log(countSlider)
+   justCountSlider.a = justCountSlider.a%newdata.length;
+    forCardData(just_main_section, justCountSlider);
+})
+
+
+// for the buy slider
+buy_left_arrow.addEventListener("click", ()=>{
+    buyCountSlider.a--;
+    console.log(buyCountSlider.a)
+    if(buyCountSlider.a<0)buyCountSlider.a = newdata.length-4;
+    forCardData(buy_main_section, buyCountSlider);
+})
+
+buy_right_arrow.addEventListener("click", ()=>{
+    buyCountSlider.a++;
+   // console.log(countSlider)
+   buyCountSlider.a = buyCountSlider.a%newdata.length;
+    forCardData(buy_main_section, buyCountSlider);
+})
+
+
+// for the gifting slider
+
+
+gift_left_arrow.addEventListener("click", ()=>{
+    giftCountSlider.a--;
+    console.log(giftCountSlider.a)
+    if(giftCountSlider.a<0)giftCountSlider.a = newdata.length-4;
+    forCardData(gift_main_section, giftCountSlider);
+})
+
+gift_right_arrow.addEventListener("click", ()=>{
+    giftCountSlider.a++;
+   // console.log(countSlider)
+   giftCountSlider.a = giftCountSlider.a%newdata.length;
+    forCardData(gift_main_section, giftCountSlider);
+})
+
+// this is for the super slider
+
+gift_left_arrow.addEventListener("click", ()=>{
+    giftCountSlider.a--;
+    console.log(giftCountSlider.a)
+    if(giftCountSlider.a<0)giftCountSlider.a = newdata.length-4;
+    forCardData(super_main_section, superCountSlider);
+})
+
+super_right_arrow.addEventListener("click", ()=>{
+    superCountSlider.a++;
+   // console.log(countSlider)
+   superCountSlider.a = superCountSlider.a%newdata.length;
+    forCardData(super_main_section, superCountSlider);
+})
+
+
+// this is for skin slider
+
+skin_left_arrow.addEventListener("click", ()=>{
+    skinCountSlider.a--;
+    console.log(skinCountSlider.a)
+    if(skinCountSlider.a<0)skinCountSlider.a = newdata.length-4;
+    forCardData(skin_main_section, skinCountSlider);
+})
+
+skin_right_arrow.addEventListener("click", ()=>{
+    skinCountSlider.a++;
+   // console.log(countSlider)
+   skinCountSlider.a = skinCountSlider.a%newdata.length;
+    forCardData(skin_main_section, skinCountSlider);
+})
+
+
+// merch section
+
+merch_left_arrow.addEventListener("click", ()=>{
+    merchCountSlider.a--;
+    console.log(merchCountSlider.a)
+    if(merchCountSlider.a<0)merchCountSlider.a = newdata.length-4;
+    forCardData(merch_main_section, merchCountSlider);
+})
+
+merch_right_arrow.addEventListener("click", ()=>{
+    merchCountSlider.a++;
+   // console.log(countSlider)
+   merchCountSlider.a = merchCountSlider.a%newdata.length;
+    forCardData(merch_main_section, merchCountSlider);
+})
+
+
+
+
+
+
 
 // console.log(heart_icon)
 function like_button(){
     let likeButton_htmls = document.querySelectorAll(".heart-icon>div");
     for(let likeButton_html of likeButton_htmls){
         likeButton_html.addEventListener("click", (e)=>{
-            console.log(likeButton_html)
             let temp = likeButton_html.dataset.id;
             if(temp == 0){
                 likeButton_html.innerHTML = `${filled_heart}`;
@@ -98,10 +237,9 @@ function like_button(){
             else if(temp==1){
                 likeButton_html.innerHTML = `${empty_heart}`
                 likeButton_html.setAttribute('data-id' , '0');
-                console.log(temp)
             }
             // console.log(e.target)
-            // forCardData()
+            forCardData()
         })
     }
 }
