@@ -319,11 +319,11 @@ let cartPath = document.getElementById("cart") ;
 
  let loginPath = document.getElementById("Login") ;
  loginPath.addEventListener("click" , ()=>{
-   window.location.href = "log.html"   ;
+   window.location.href = "res.html"   ;
  })
 
 
- let searchbtn = document.getElementById("searchbtn") ;
+ let searchbtn = document.getElementById("searchbtn");
  searchbtn.addEventListener("click" , ()=>{
     let inputValue = document.getElementById("searchBar").value ;
 //    sessionStorage.setItem("searched-history" , JSON.stringify(inputValue)) ;
