@@ -1,3 +1,67 @@
+let cartItem = JSON.parse(localStorage.getItem("cartProducts"))||[];
+
+if(cartItem.length==0){
+    window.location.href="./empty_cart.html";
+}
+
+
+let price;
+
+function CartSummary(){
+    let Cart = document.querySelector(".cart_summary");
+    cartItem.innerHTML="";
+    let data =cartItem.map((item)=>{
+         return ` <div>
+         <img width="10%"
+             src="${item.link}" alt="">
+         <div>
+             <p>${item.title}</p>
+             <p><span>$${Number(Math.floor(item.price)+500)}</span>  $${Math.floor(item.price)}</p>
+         </div>
+         <i class="material-icons">&#xe872;</i>
+         <p class="qty">Qty:${cartItem.length}</p>
+     </div>`
+    })
+    Cart.innerHTML=data.join("");
+
+
+
+    let delete_carts = document.querySelectorAll(".material-icons");
+    // console.log(delete_cart)
+    for(let delete_cart of delete_carts){
+       delete_cart.addEventListener("click",function(e){
+          let title1 = e.target.parentNode.childNodes[3].childNodes[1].innerText;
+          // console.log(title1)
+          cartItem = cartItem.filter((ele)=>{
+             return (title1!=ele.title);
+          })
+          localStorage.setItem("cartProducts",JSON.stringify(cartItem));
+          location.reload();
+       })
+    }
+
+
+    let total_price = cartItem.reduce((acc,item)=>{
+        return acc+Number(Math.floor(item.price));
+       },0)
+       price=total_price;
+       
+
+   
+}
+CartSummary();
+
+function rendering_price(){
+    let x=document.querySelector(".total_count");
+    let y=document.querySelector(".total_amount");
+    
+    x.innerHTML=`$${Math.floor(price)}`;
+    y.innerHTML=`$${Math.floor(price)+121}`;
+}
+rendering_price();
+
+
+
 // ----------fething data for payment cards-------------
 
 let cod = document.querySelector(".payment_type_7");
@@ -110,67 +174,40 @@ checkout_button.addEventListener("click",function(){
 
 
 
-// let url= "https://6370948408218c267e01d3bd.mockapi.io/mens";
-//     fetch(url)
-//     .then((res)=>res.json())
-//     .then((data)=>{
-//         bag=data;
-//         display(data)
-//     })
-//     .catch((err)=>console.log(err));
 
- 
-//     function display(data){
-//        let cart_summary = document.querySelector(".cart_summary");
-//        cart_summary.innerHTML="";
-//         let array=data.map((item)=>{
-//         return
-//             `<div>
-//        <img width="10%"
-//            src=${data.image} alt="">
-//        <div>
-//            <p>${data.title}</p>
-//            <p>₹${data.price}</p>
-//        </div>
-//    </div>`
-//    cart_summary.innerHTML = array.join("");
-// })
-// console.log(array)
-  // }
-
-function store(){
+// function store(){
 
 
 
 
-  mydata=JSON.parse(localStorage.getItem("cart-item"));
+//   mydata=JSON.parse(localStorage.getItem("cart-item"));
 
 
-Displaydata(mydata);
+// Displaydata(mydata);
 
-function Displaydata(data){
-    data.map((ele) => {
-        let x =document.createElement("div");
-        let y =document.createElement("div");
-        h2=document.createElement("p");
-        h2.innerText=ele.brand;
-        img=document.createElement("img");
-        img.setAttribute("src",ele.image);
-        h3=document.createElement("p");
-        h3.innerText="Rs."+ele.price;
-        // h4=document.createElement("h5");
-        // h4.innerText=ele.brand;
+// function Displaydata(data){
+//     data.map((ele) => {
+//         let x =document.createElement("div");
+//         let y =document.createElement("div");
+//         h2=document.createElement("p");
+//         h2.innerText=ele.brand;
+//         img=document.createElement("img");
+//         img.setAttribute("src",ele.image);
+//         h3=document.createElement("p");
+//         h3.innerText="Rs."+ele.price;
+//         // h4=document.createElement("h5");
+//         // h4.innerText=ele.brand;
     
 
-        x.append(h2,h3);
-        y.append(img,x)
-        document.querySelector(".cart_summary").append(y);
-    });
+//         x.append(h2,h3);
+//         y.append(img,x)
+//         document.querySelector(".cart_summary").append(y);
+//     });
         
-}
+// }
 
 
-}
+// }
 
-store();
+// store();
 

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart</title>
     <link rel="stylesheet" href="item_cart.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -220,13 +221,17 @@
      </div>
 
     <div class="mini-nav">
-        <div><a href="../index.html">Home</a></div>
+        <div><a href="../productpage.html">Home</a></div>
         <div> &nbsp; &nbsp; > &nbsp; &nbsp;</div>
         <div><a href="./empty_cart.html">cart</a></div>
     </div>
 
     <div class="main_content">
         <div class="left_main_content">
+            <h3 class="cart_summary_heading">CART SUMMARY</h3>
+            <div class="cart_detail">
+                
+            </div>
             <div class="bonus_offer">
                 <div class="dropdown">
                     <div>BONUS OFFER</div>
@@ -294,18 +299,7 @@
                 </div>
 
             </div>
-            <h3 class="cart_summary_heading">CART SUMMARY</h3>
-            <div class="cart_detail">
-                <div>
-                    <img width="10%"
-                        src="https://cdn.shopify.com/s/files/1/0906/2558/products/424092031-1.jpg?v=1661529396" alt="">
-                    <div>
-                        <p>Wingman Waterproof Microliner - 01 I'll Be Black (Black)</p>
-                        <p>₹499.00</p>
-                    </div>
-
-                </div>
-            </div>
+            
         </div>
         <div class="right_main_content">
             <div id="apply_coupan">
@@ -324,17 +318,50 @@
                         <p>Shipping</p>
                     </div>
                     <div>
-                        <p>₹799.00</p>
-                        <p>₹121.88</p>
+                        <p id="amount_count"></p>
+                        <p>$121.88</p>
                         <p style="color:rgb(211, 123, 138)">Free</p>
                     </div>
                 </div>
                 <div class="price_details_lower">
                     <h3>Total</h3>
-                    <h3>₹799.00</h3>
+                    <h3 id="amount_total"></h3>
                 </div>
             </div>
-            <div></div>
+           
+            <div class="address">
+                <div>
+                    <h3 class="address_title">DELIVERY ADDRESS</h3>
+                    <p>+Add New Address</p>
+                </div>
+                <div>
+                    <p>Ankush Kumar</p>
+                    <p>Nehru Nagar, Bhopal</p>
+                    <p>LIG-53</p>
+                    <p>Phone Number - 9876543210</p>
+                    <select name="" id="">
+                        <option value="address_here">Select Address</option>
+                        <option >
+                            <p>Ankush Kumar</p>
+                            <p>Near Railway statin, Indoor</p>
+                            <p>MIG-356</p>
+                            <p>Phone Number - 9487686210</p>
+                        </option>
+                        <option >
+                            <p>Apurv Singh</p>
+                            <p>Nehru Nagar, Bhopal</p>
+                            <p>LIG-53</p>
+                            <p>Phone Number - 9809876210</p>
+                        </option>
+                        <option >
+                            <p>Parbhat </p>
+                            <p>punjabi Nagar, Amritsar</p>
+                            <p>LIG-53</p>
+                            <p>Phone Number - 9876543210</p>
+                        </option>
+                    </select>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -344,9 +371,84 @@
 
 
     <div class="bottomnavbar">
-        <div></div>
         <div>
-            <button>total price</button>
+            <p>Delivering to - Ankush Kumar</p>
+            <p>LIG-53, Nehru Nagar, Bhopal</p>
+        </div>
+        <div>
+            <button></button>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div id="outterfooter">
+  
+            <div class="footer">
+                <div class="one">
+                    <img height="95px"
+                        src="https://i.postimg.cc/GBXyCkYD/Whats-App-Image-2022-12-13-at-19-48-24-removebg-preview.png" alt="">
+                    <div id="social">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <path
+                                    d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
+                                viewBox="0 0 64 64">
+                                <path
+                                    d="M57,17.114c-1.32,1.973-2.991,3.707-4.916,5.097c0.018,0.423,0.028,0.847,0.028,1.274c0,13.013-9.902,28.018-28.016,28.018	c-5.562,0-12.81-1.948-15.095-4.423c0.772,0.092,1.556,0.138,2.35,0.138c4.615,0,8.861-1.575,12.23-4.216	c-4.309-0.079-7.946-2.928-9.199-6.84c1.96,0.308,4.447-0.17,4.447-0.17s-7.7-1.322-7.899-9.779c2.226,1.291,4.46,1.231,4.46,1.231	s-4.441-2.734-4.379-8.195c0.037-3.221,1.331-4.953,1.331-4.953c8.414,10.361,20.298,10.29,20.298,10.29s-0.255-1.471-0.255-2.243	c0-5.437,4.408-9.847,9.847-9.847c2.832,0,5.391,1.196,7.187,3.111c2.245-0.443,4.353-1.263,6.255-2.391	c-0.859,3.44-4.329,5.448-4.329,5.448S54.314,18.335,57,17.114z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <path
+                                    d="M 8.6425781 4 C 7.1835781 4 6 5.181625 6 6.640625 C 6 8.099625 7.182625 9.3085938 8.640625 9.3085938 C 10.098625 9.3085938 11.283203 8.099625 11.283203 6.640625 C 11.283203 5.182625 10.101578 4 8.6425781 4 z M 21.535156 11 C 19.316156 11 18.0465 12.160453 17.4375 13.314453 L 17.373047 13.314453 L 17.373047 11.310547 L 13 11.310547 L 13 26 L 17.556641 26 L 17.556641 18.728516 C 17.556641 16.812516 17.701266 14.960938 20.072266 14.960938 C 22.409266 14.960937 22.443359 17.145609 22.443359 18.849609 L 22.443359 26 L 26.994141 26 L 27 26 L 27 17.931641 C 27 13.983641 26.151156 11 21.535156 11 z M 6.3632812 11.310547 L 6.3632812 26 L 10.923828 26 L 10.923828 11.310547 L 6.3632812 11.310547 z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                viewBox="0 0 50 50">
+                                <path
+                                    d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="two">
+                    <h1>GET IN TOUCH</h1>
+                        <h2>Call us at</h2><br>
+                        <h2>1800-209-9933</h2>
+                        <h2>Monday to Friday : 9 AM to 7 PM</h2>
+                    <!-- <button>Subscribe</button> -->
+                </div>
+                <div class="three">
+                    <div>About Us</div>
+                    <div>Privacy Policy</div>
+                    <div>Terms of Use</div>
+                    <div>FAQs</div>
+                    <div>Contact Us</div>
+                    <div>Property Managers</div>
+                    <div>Holiday Communities</div>
+                </div>
+                <div class="four">
+                    <h1>Have Questions?</h1>
+                    <!-- <h1 id="email">support@tripvillas.com</h1> -->
+                    <div>
+                        <img src="https://d2vcelvjdj7n25.cloudfront.net/static/images/playstore.png" alt="">
+                        <img src="https://d2vcelvjdj7n25.cloudfront.net/static/images/appstore.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
         </div>
     </div>
 
