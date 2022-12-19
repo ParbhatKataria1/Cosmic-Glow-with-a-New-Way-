@@ -141,20 +141,8 @@ border-bottom: none;
     background-color: #f5c7d2;
 } */
 
-#navbar input{
-    font-size: 17px;
-    height: 35px ;
-    width: 450px ;
-    border: 1px solid black ;
-    border-radius: 10px ;
-    box-shadow: rgb(225, 225, 225) 0px -15px 15px -15px inset;
-}
-#navbar button:hover{
-    cursor: pointer; 
-    background-color: #ff6186;
-    border-color: white ;
-}
-#RightIcons>img:hover ,#Login:hover{
+
+#RightIcons>img:hover {
     background-color:#ff6186 ;
     color: white;
     border: 1px solid rgb(255, 255, 255) ;
@@ -231,12 +219,13 @@ border-bottom: none;
 }
 #bestSlr{
    
-    background-image: url("https://png.pngtree.com/back_origin_pic/03/55/28/348ae6d58d9e64f6efbe63fe167eb1f7.jpg");
+    background-image: url("https://t3.ftcdn.net/jpg/05/50/78/28/240_F_550782872_FY9TZu3QyXkLaqHrJANzMGE9TkogzBUX.jpg");
     background-repeat: no-repeat ;
     height: 500px ;
     display: flex;
     flex-direction: column;
     margin-top: 4% ;
+    background-size: cover;
 }
 
 .styleOutterBestSellCards{
@@ -388,6 +377,29 @@ margin: auto;
     display: flex;
     flex-direction: column;
     margin-top: 4% ;
+    padding-bottom: 54px;
+}
+#justin{
+    background-image: url("https://t4.ftcdn.net/jpg/05/02/81/39/240_F_502813979_tLpTfCH85cSlKH9M7G2tn6lsle8up01m.jpg");
+}
+
+#buynow{
+    background-image: url("https://t3.ftcdn.net/jpg/05/36/97/20/240_F_536972085_ANyfi5ZFyRPI096WFSCBjtu2nCEzh29S.jpg");
+}
+#gifting{
+    background-image: url("https://t3.ftcdn.net/jpg/05/50/78/28/240_F_550782872_FY9TZu3QyXkLaqHrJANzMGE9TkogzBUX.jpg");
+}
+
+#super{
+    background-image: url("https://t4.ftcdn.net/jpg/05/02/81/39/240_F_502813979_tLpTfCH85cSlKH9M7G2tn6lsle8up01m.jpg");
+}
+
+#Skincarebasic{
+    background-image: url("https://t4.ftcdn.net/jpg/05/02/81/39/240_F_502813979_tLpTfCH85cSlKH9M7G2tn6lsle8up01m.jpg");
+}
+
+#marchstation{
+    background-image: url("https://t3.ftcdn.net/jpg/05/50/91/98/240_F_550919818_1TSV13vAIdZKBv14ULe6ri2zddYsw1aj.jpg");
 }
 #taglineSec , #refer , #midInterval , #this{
  display: flex ; 
