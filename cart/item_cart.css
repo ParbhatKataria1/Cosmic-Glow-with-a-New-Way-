@@ -1,147 +1,4 @@
-body{
-    background-color: rgb(247, 243, 237);
-    font-family: sans-serif;
-}
 
-/* ------navbar------ */
-
-
-#NAVBARFix{
-    position: fixed ;
-    top: 0 ;
-    width: 100%;
-}
-
-#navbar{
-    display: flex ; 
-    flex-direction: row ;
-    height: 80px ;
-    gap: 14px;
-    background-color: #F7BBC9;
-    align-items: center ;
-}
-
-#navbar>img{
-    height: 80px ;
-    width: 250px;
-}
-#navbar>img:hover{
-   height: 81px ;
-   cursor: pointer;
-}
-#navbar>input{
-    font-size: 17px;
-    margin-left: 50px;
-    height: 35px ;
-    width: 450px ;
-    border-color: black ;
-    border-radius: 10px ;
-    box-shadow: rgb(183, 189, 195) 0px -15px 15px -15px inset;
-}
-#navbar>button{
-    
-    width:50px ;
-    align-items: center ;
-    height: 35px ;
-    border-color: black ;
-    border-radius: 10px ;
-
-}
-#navbar>button:hover{
-    cursor: pointer; 
-    background-color: #ff6186;
-    border-color: white ;
-}
-#navbar>button > img , #navbar>#RightIcons>img , #navbar>#Login>img {
-    height: 30px ;
-}
-#Login{
-    display: flex ;
-    flex-direction: row ;
-    margin-left: 18%;
-    width: 170px ;
-    justify-content: center;
-}
-#Login>img {
-   /* margin-top: 9px ; */
-   margin-right: 5px;
-}
-#RightIcons{
-    margin-left: 1%;
-}
-#RightIcons>img:hover ,#Login:hover{
-    background-color:#ff6186 ;
-    color: white;
-    border-radius: 5px ;
-    cursor: pointer;
-  }
- 
-  *{
-    margin: 0 ;
-    padding: 0  ;
- }
-#navFilters{
-   
-    height: 30px ;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    text-align: center;
-
-}
-#navFilters>ul{
-    display: inline-flex ;
-    list-style: none ;
-   
-    background-color: #F7BBC9 ;
-    width: 100%;
-
-}
-#navFilters>ul>li{
-  padding: 15px ;
-  margin: 15px ;
-  width: 130px;
-  margin-left: 20px ;
-}
-#navFilters>ul>li:hover{
-    background-color: #ff6186;
-    color: white;
-    cursor: pointer;
-}
-#navFilters>ul>li>img{
-    height: 25px ;
-    margin-right: 10px;
-}
-.subManu-make {
-display: none ;
-}
-#navFilters>ul>li:hover .subManu-make  {
-
-gap: 5px ;
-display: block ;
-position: absolute ;
-margin-top: 15px ;
-margin-left: -15px ;
-background-color: black;
-}
-#navFilters>ul>li:hover .subManu-make ul{
-display: block ;
-margin: 10px ;
-
-}
-#navFilters>ul>li:hover .subManu-make ul li{
-width: 150px ;
-padding: 15px ;
-border-bottom: 1px double rgb(255, 255, 255);
-color: rgb(223, 222, 222);
-text-align: left;
-background: transparent ;
-}
-#navFilters>ul>li:hover .subManu-make>ul>li:hover{
-color: #ff6186;
-}
-#navFilters>ul>li:hover .subManu-make ul li:last-child{
-border-bottom: none;
-}
 
 
    /* ------mini-navbar------- */
@@ -176,6 +33,9 @@ border-bottom: none;
     background-color: white;
     padding:15px 25px 15px 25px;
     display: flex;
+    position: absolute;
+    top: 172px;
+    justify-content: center;
 }
 
 
@@ -561,9 +421,8 @@ height:100%;
 
 /* ----------footer-------- */
 
-
 #outterfooter {
-    background: #262626;
+    background: white;
     padding: 0 30px;
     padding-top: 60px;
     font-size: 11px;

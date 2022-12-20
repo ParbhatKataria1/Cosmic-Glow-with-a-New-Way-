@@ -268,7 +268,8 @@ margin: auto;
 
 .bestSellCardsItem{
     width: 23%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
     line-height: 1.7;
     background-color: white;
@@ -466,11 +467,12 @@ text-align: center;
 
 #email{
     text-align: center;
-    width: 70%;
+    width: 100%;
     padding: 50px;
     margin: auto;
     background-image: url("https://www.harrisons1863.com/wp-content/uploads/95102_1-274x274.jpg");
     background-repeat: 2 ;
+    margin-bottom: 34px;
 }
 #email>div{
     display: flex;
@@ -490,12 +492,13 @@ text-align: center;
     height: 27px;
 }
 #email-box>input{
-    width: 80%;
+    width: 50%;
     height: 100%;
     padding: 6px;
     border-radius: 5px 0px 0px 5px;
     font-size: 21px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border: none;
     background-color: rgb(228, 228, 228);
 }
 #email-box>input:focus{
@@ -503,12 +506,13 @@ text-align: center;
     outline: none;
 }
 #email-box>button{
-    width: 20%;
-    height: 151%;
+    width: 10%;
+    height: 146%;
     padding: 6px;
     border-radius: 0px 5px 5px 0px;
     font-size: 21px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border: none;
     background-color: #ffdae3;
 }
 #email-box>button:hover{
