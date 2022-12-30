@@ -244,14 +244,7 @@ function like_button(){
     }
 }
 
-// search_button.addEventListener("click", ()=>{
 
-// })
-
-const cart = document.querySelector("#cart");
-cart.addEventListener("click", ()=>{
-    window.location.href = "./cart.html"
-})
 
 
 

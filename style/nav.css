@@ -34,6 +34,10 @@
 #outter_searchBar{
     position: relative;
     border-radius: 9px;
+    height: 100%;
+    display: flex;
+    padding: 3px 6px;
+    box-sizing: border-box;
 }
 #nav-search{
     display: flex;
@@ -64,7 +68,7 @@
     padding: 0px 5px;
     height: 100% ;
     width: 450px ;
-    box-shadow: rgb(225, 225, 225) 0px -15px 15px -15px inset;
+    /* box-shadow: rgb(225, 225, 225) 0px -15px 15px -15px inset; */
     border: none;
     border-radius: 8px;
     /* border: 1px solid black; */
@@ -76,15 +80,12 @@
     display: flex;
     width: 105px;
     align-items: center;
-    /* color: rgb(233, 33, 33); */
     padding: 0px 11px 0px 9px;
     font-size: 15px;
 }
 
 #navbar button:hover{
     cursor: pointer; 
-    /* background-color: #ff6186; */
-    /* border-color: white ; */
 }
 #nav-search input:focus{
     outline: none;
@@ -92,25 +93,14 @@
 #nav-search button{
     height: 100%;
     border-radius: 0px 10px 10px 0;
-    /* border: 0px 0px 0px 1px solid gray; */
     border: none;
     border-left: 1px solid gray;
-    /* padding: 5px; */
 }
 #nav-search button>svg{
-    /* width: 100%; */
     height: 25px;
     object-fit: contain;
 }
-#navbar>button{
-    
-    /* width:50px ;
-    align-items: center ;
-    height: 35px ;
-    border-color: black ;
-    border-radius: 10px ; */
-
-}
+#na
 #nav-search>button{
     cursor: pointer; 
     /* background-color: #ff6186;
@@ -124,6 +114,7 @@
 
 
 .search_pop_items{
+    box-sizing: border-box;
     display: none;
     background-color: white;
     position: absolute;
@@ -134,15 +125,13 @@
     padding-top: 23px;
     font-weight: 700;
     border-radius: 12px;
-    width: 440px;
+    width: 100%;
     top: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .search_frequent{
     width: 90%;
-    /* height: 100px; */
-    /* border: 1px solid red; */
     margin-bottom: 23px;
 }
 .search_frequent>div:nth-child(1){
@@ -221,8 +210,8 @@
 
 
 
-#navbar>button > img , #RightIcons img , #Login>img {
-    height: 30px ;
+#RightIcons svg{
+    fill: rgb(39, 39, 39);
 }
 #Login{
     display: flex ;

@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>
-    <link rel="stylesheet" href="empty_cart.css">
-    <link rel="stylesheet" href="../style/nav.css">
+    <title>payment</title>
+    <link rel="stylesheet" href="./style/pay.css">
+    <link rel="stylesheet" href="./item_cart.css">
     <link rel="stylesheet" href=".\style\index.css">
      <link rel="stylesheet" href=".\style\footer.css">
      <link rel="stylesheet" href="./style/nav.css">
      <link rel="stylesheet" href="./style/common.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    
     <div id="NAVBARFix" >
         <div id="navbar">
             <img  src="https://i.postimg.cc/Gh8hpY41/Butterfly-2-removebg-preview.png
@@ -228,25 +228,70 @@
         <div><a href="../index.html">Home</a></div>
         <div> &nbsp; &nbsp; > &nbsp; &nbsp;</div>
         <div><a href="./item_cart.html">cart</a></div>
+        <div> &nbsp; &nbsp; > &nbsp; &nbsp;</div>
+        <div><a href="">Payment</a></div>
     </div>
-    <div class="empty_cart_box">
-        <div class="inner-empty-cart-box">
-            <img src="https://asset.nykaafashion.com/static/assets/empty-cart.37b1b704.png" alt="cart image">
-            <p>Hey! It's lonely here.
-               <br>
-                Your bag seems to have no company.
-                <br>
-                Why not add some products?</p>
-            <button><a href="../productpage.html">SHOP NOW</a></button>
+
+
+
+    <div class="payment_container">
+        <div class="left_payment_container">
+            <div>
+                <h3 class="price_detail">PRICE DETAILS</h3>
+                <div id="price_details_box">
+                    <div class="price_details_upper">
+                        <div>
+                            <p>Subtotal(Unclusive of Taxes)</p>
+                            <p>Tax</p>
+                            <p>Shipping</p>
+                        </div>
+                        <div>
+                            <p class="total_count"></p>
+                            <p>$121.88</p>
+                            <p style="color:rgb(211, 123, 138)">Free</p>
+                        </div>
+                    </div>
+                    <div class="price_details_lower">
+                        <h3>Total</h3>
+                        <h3 class="total_amount"></h3>
+                    </div>
+                </div>
+            </div>
+            <h3 class="cart_summary_heading">CART SUMMARY</h3>
+            <div class="cart_summary">
+                <!-- <div>
+                    <img width="10%"
+                        src="https://cdn.shopify.com/s/files/1/0906/2558/products/424092031-1.jpg?v=1661529396" alt="">
+                    <div>
+                        <p>Wingman Waterproof Microliner - 01 I'll Be Black (Black)</p>
+                        <p><span>$134</span> ₹499.00</p>
+                    </div>
+                    <p class="qty">Qty:6</p>
+                </div> -->
+
+            </div>
+
+        </div>
+        <div class="right_payment_container">
+            <h3 class="payment_method">PAYMENT METHOD</h3>
+            <div class="payment_method_box">
+                <div>
+                    <p class="payment_type_1">UPI ID</p>
+                    <p class="payment_type_2">CARDS</p>
+                    <p class="payment_type_3">PAYLATER</p>
+                    <p class="payment_type_4">CARDLESS EMI</p>
+                    <p class="payment_type_5">WALLETS</p>
+                    <p class="payment_type_6">NETBANKING</p>
+                    <p class="payment_type_7">CASH ON DELEVERY</p>
+                </div>
+                <div class="payment_render_data">
+                   
+                </div>
+
+            </div>
         </div>
     </div>
-    <div class="bestseller">
-        <div class="bestseller_heading">
-            <p>&#9472;&#9472; &nbsp; </p>
-            <p>BESTSELLER</p>
-            <p> &nbsp; &#9472;&#9472;</p>
-        </div>
-    </div>
+
 
     <div id="footer">
         <div id="outterfooter">
@@ -319,8 +364,7 @@
         </div>
     </div>
 
-
 </body>
 
 </html>
-<script src="empty_cart.js"></script>
+<script src="./javascript/pay.js"></script>
